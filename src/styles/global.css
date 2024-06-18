@@ -1,0 +1,39 @@
+input {
+  width: 300px;
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+  padding: 8px 12px;
+  color: var(--gray-06);
+}
+select {
+  width: 180px;
+  padding: 8px 12px;
+  border: 1.5px solid var(--gray-05);
+  border-radius: 4px;
+}
+/* //공통 */
+button:hover {
+  cursor: pointer;
+  transition: 0.3s;
+}
+button.priLineBtn {
+  border-radius: 4px;
+  border: 1px solid var(--color-pri-normal);
+  padding: 6px 14px;
+  background-color: transparent;
+}
+button.priLineBtn:hover {
+  background-color: var(--gray-03);
+  cursor: pointer;
+}
+button.priBlockBtn {
+  border-radius: 4px;
+  border: 1px solid var(--color-pri-normal);
+  padding: 6px 14px;
+  background-color: var(--color-pri-normal);
+  color: var(--color-white);
+}
+button.priBlockBtn:hover {
+  background-color: var(--color-pri-dark);
+  cursor: pointer;
+}

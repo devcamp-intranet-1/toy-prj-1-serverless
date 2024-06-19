@@ -49,19 +49,3 @@ div.container > .layout > .layout-btns > .layout-btn:hover {
   background-color: #40b883;
   color: white;
 }
-/*************** 우측 레이아웃 ***************/
-div.container > .contents {
-  background-color: #fcfcfc;
-  flex-grow: 1;
-  height: 100%;
-  padding: 16px 24px;
-  display: flex;
-  flex-direction: column;
-}
-div.container > .contents > .title {
-  width: 100%;
-  font-size: 26px;
-  font-weight: 700;
-  /* margin: 26px 0; */
-  color: #000;
-}

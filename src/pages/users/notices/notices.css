@@ -1,0 +1,155 @@
+.noticeContainer,
+.noticeDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.noticeContainer__buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.noticeContainer__filter {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#buttonGroup {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#buttonGroup button {
+  flex: 1 0 30%;
+  border-radius: 0px;
+  border: 1px solid var(--gray-05);
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  padding: 8px;
+}
+
+#buttonGroup button:hover {
+  /* background-color: var(--gray-03);
+  transition: 0.3s; */
+  cursor: pointer;
+}
+
+.buttonGroup__active {
+  background-color: var(--color-pri-normal);
+  color: var(--color-white);
+}
+
+#eventMenu,
+#mileageMenu,
+#paymentMenu,
+#humanResourceMenu,
+#educationMenu,
+#etcMenu {
+  display: none;
+}
+
+#eventMenu.showtable,
+#mileageMenu.showtable,
+#paymentMenu.showtable,
+#humanResourceMenu.showtable,
+#educationMenu.showtable,
+#etcMenu.showtable {
+  display: block;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+table tr {
+  border-bottom: 1px solid var(--gray-05);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 12px 8px;
+}
+
+th:first-child,
+td:first-child {
+  width: 10%;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 35%;
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+  width: 15%;
+}
+
+th:nth-child(4),
+td:nth-child(4) {
+  width: 15%;
+}
+
+th:nth-child(5),
+td:nth-child(5) {
+  width: 15%;
+}
+
+th:nth-child(6),
+td:nth-child(6) {
+  width: 10%;
+}
+
+/* noticeDetail 페이지 */
+.noticeDetail__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgba(var(--color-pri-normal), 0.5);
+}
+
+.noticeDetail__backBtn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.noticeDetail__items {
+  display: flex;
+  align-items: center;
+  flex: 1 0 40%;
+  border-bottom: 2px solid var(--gray-04);
+}
+
+.noticeDetail__items h5 {
+  width: 100%;
+  padding: 8px 10px;
+}
+
+.noticeDetail__items h5:nth-child(1) {
+  background-color: var(--gray-03);
+  min-width: 32px;
+}
+
+textarea {
+  border: none;
+}
+
+/* 공지삭제모달 */
+.noticeDeleteModal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noticeDeleteModal > h5 {
+  padding: 16px 0;
+}

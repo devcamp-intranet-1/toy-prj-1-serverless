@@ -11,8 +11,12 @@
     />
     <!-- 공통 레이아웃 CSS -->
     <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
     <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="notices.css" />
+    <!-- 공용 컴포넌트 CSS -->
+    <link rel="stylesheet" href="../../../styles/global.css" />
   </head>
 
   <body>
@@ -85,9 +89,135 @@
       <div class="contents">
         <!-- 페이지 타이틀 -->
         <h1 class="title">공지사항</h1>
+        <div class="noticeContainer">
+          <div id="buttonGroup"></div>
+          <div class="noticeContainer__filter">
+            <input
+              type="search"
+              id="searchBox"
+              name="q"
+              placeholder="내용 또는 제목을 입력해주세요."
+              data-shape="line"
+            />
+            <select name="filter" id="filter">
+              <option value="latest">최신순</option>
+              <option value="oldShoot">오래된순</option>
+            </select>
+            <a href="../notices/detail.html"
+              ><button data-color="warning" data-shape="line">
+                상세테스트
+              </button></a
+            >
+          </div>
+          <div>
+            <div id="eventMenu" class="tablecontents showtable">
+              <table id="noticeTable">
+                <thead>
+                  <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>첨부파일</th>
+                    <th>조회수</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <div class="pagination">
+                <ol id="numbers"></ol>
+              </div>
+            </div>
 
-        <div class="content">각 페이지 당 콘텐츠 영역입니다.</div>
+            <table id="mileageMenu">
+              <thead>
+                <tr>
+                  <th>번호2</th>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>1</td>
+                  <td>테스트 제목</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <table id="paymentMenu">
+              <thead>
+                <tr>
+                  <th>번호3</th>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>1</td>
+                  <td>테스트 제목</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <table id="humanResourceMenu">
+              <thead>
+                <tr>
+                  <th>번호4</th>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>1</td>
+                  <td>테스트 제목</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <table id="educationMenu">
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                  <th>직성자</th>
+                  <th>작성일</th>
+                  <th>첨부파일</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>1</td>
+                  <td>테스트 제목</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+            <table id="etcMenu">
+              <thead>
+                <tr>
+                  <th>번호</th>
+                  <th>제목</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Example row -->
+                <tr>
+                  <td>1</td>
+                  <td>테스트 제목</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+    <script src="../notices/notice.js"></script>
+    <script src="../notices/paginate.js"></script>
   </body>
 </html>

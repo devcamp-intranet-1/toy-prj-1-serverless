@@ -12,7 +12,11 @@
     <!-- 공통 레이아웃 CSS -->
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="mypage.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
   </head>
 
   <body>
@@ -84,11 +88,31 @@
       </div>
 
       <!-------------------------- 페이지 콘텐츠 -------------------------->
-      <div class="contents">
+      <div class="page">
         <!-- 페이지 타이틀 -->
-        <h1 class="title">마이페이지</h1>
+        <h1 class="page__title">마이페이지</h1>
 
-        <div class="content">각 페이지 당 콘텐츠 영역입니다.</div>
+        <div class="page__header">
+          <h2>내 정보</h2>
+          <button data-color='positive' data-shape='block'>정보 수정</button>
+        </div>
+        <div class="page__body">
+          <div class="page__body-img">
+            <img src="/public/images/_Avatar_.png" alt="profileimg">
+          </div>
+          <div class="info">
+            <div class="info__first">
+              <h2 class="info__first-name">홍길동</h2> 
+              <h4 class="info__first-position">차장</h4>
+            </div>
+            <div class="info__second">
+              <img src="/public/icons/email.svg" alt="email">
+              <h4 class="email">honggildong@google.com</h4>
+              <img src="/public/icons/call.svg" alt="call">
+              <h4 class="call">010-1234-5678</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

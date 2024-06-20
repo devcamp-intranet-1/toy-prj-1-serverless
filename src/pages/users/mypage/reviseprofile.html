@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TAECO Intranet</title>
+  <!-- reset.css: 크로스 브라우징 이슈 방지 -->
+  <link
+  href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+  rel="stylesheet" />
+  <!-- 공통 레이아웃 CSS -->
+  <link rel="stylesheet" href="/src/styles/layout.css" />
+  <!-- 페이지 CSS -->
+  <link rel="stylesheet" href="reviseprofile.css" />
+  <link rel="stylesheet" href="/src/styles/color.css" />
+  <link rel="stylesheet" href="/src/styles/font.css" />
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+<body>
+  <div class="container">
+    <!-------------------------- 레이아웃 -------------------------->
+    <div class="layout">
+      <div class="layout-btns">
+        <!-- 레이아웃-로고 -->
+        <div class="logo">
+          <img
+            src="/public/images/logo.png"
+          />
+        </div>
+
+        <!-- 레이아웃-Nav -->
+        <a class="layout-btn" href="../dashboard/dashboard.html">
+          <img
+            src="/public/icons/dashboard.svg"
+            alt="dashboard-icon"
+            width="24"
+            height="24"
+          />대시보드
+        </a>
+        <a class="layout-btn" href="../approval/approval.html">
+          <img
+            src="../../../../public/icons/approval.svg"
+            alt="approval-icon"
+            width="24"
+            height="24"
+          />전자결재
+        </a>
+        <a class="layout-btn" href="../notices/notices.html">
+          <img
+            src="/public/icons/notices.svg"
+            alt="notices-icon"
+            width="24"
+            height="24"
+          />공지사항
+        </a>
+        <a class="layout-btn" href="../mileage/mileage.html">
+          <img
+            src="/public/icons/mileage.svg"
+            alt="mileage-icon"
+            width="24"
+            height="24"
+          />마일리지
+        </a>
+        <a class="layout-btn" href="../mypage/mypage.html">
+          <img
+            src="/public/icons/mypage.svg"
+            alt="mypage-icon"
+            width="24"
+            height="24"
+          />마이페이지
+        </a>
+      </div>
+
+        <!-- 레이아웃-로그아웃 -->
+      <div class="logout">
+        <a class="layout-btn" href="/">
+          <img
+            src="/public/icons/logout.svg"
+            alt="logout-icon"
+            width="24"
+            height="24"
+          />로그아웃
+        </a>
+      </div>
+    </div>
+
+    <!-------------------------- 페이지 콘텐츠 -------------------------->
+    <div class="page">
+      <!-- 페이지 타이틀 -->
+    <h1 class="page__title">마이페이지</h1>
+
+    <div class="page__header">
+      <h2>내 정보</h2>
+      <button data-color='positive' data-shape='block'>변경사항 저장</button>
+    </div>
+    <div class="page__body">
+      <div class="body__img">
+        <img src="/public/images/_Avatar_.png" 
+        alt="profileimg" 
+        id="background"
+        >
+        <!-- <img src="/public/icons/revisionpic.svg" 
+        alt="revisionimg" 
+        id="foreground"
+        > -->
+      </div>
+      <button data-color='neutral' data-shape='line'>사진 수정</button>
+      
+      <form action="/submit-user-info" method="post">
+        <ul class="user__info">
+          <li class="info__name">
+            <label for="name"><span>이름</span></label>
+            <input type="text" id="name" name="name" placeholder="홍길동" required>
+          </li>
+          
+          <li class="info__position">
+            <label for="positions"><span>직함</span></label>
+            <select name="positions" id="positions" required>
+              <option value="사장">사장</option>
+              <option value="부장">부장</option>
+              <option value="차장">차장</option>
+              <option value="과장">과장</option>
+              <option value="대리">대리</option>
+              <option value="사원">사원</option>
+            </select>
+          </li>
+          
+          <li class="info__email">
+            <label for="email"><span>메일</span></label>
+            <input type="email" id="email" name="email" placeholder="eco@taeco.com" required>
+          </li>
+          
+          <li class="info__number">
+            <label for="phone"><span>핸드폰 번호</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+          </li>
+        </ul>
+      </form>
+        
+    </div>
+      
+</body>
+</html>

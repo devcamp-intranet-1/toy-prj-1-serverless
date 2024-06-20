@@ -1,10 +1,10 @@
 {
-  "liveServer.settings.port": 5500,
+  "liveServer.settings.port": 5501,
 
   /******* Prettier 기본 설정 *******/
   "prettier.singleQuote": true,
   "prettier.trailingComma": "es5", // 여러 줄로 이루어진 구문에서 후행 쉼표를 추가할지 설정: "none", "es5", "all" / ex. { a:1,b:1,}
   "prettier.bracketSpacing": true, //객체 리터럴에서 중괄호와 속성 사이에 공백을 추가
   "prettier.tabWidth": 2, //기본 Spaces: 2
-  "prettier.semi": true, //세미콜론 자동 생성
+  "prettier.semi": true //세미콜론 자동 생성
 }

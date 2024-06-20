@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAECO Intranet</title>
+    <!-- reset.css: 크로스 브라우징 이슈 방지 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+      rel="stylesheet"
+    />
+    <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="mileageDetail.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-------------------------- 레이아웃 -------------------------->
+      <div class="layout">
+        <div class="layout-btns">
+          <!-- 레이아웃-로고 -->
+          <div class="logo">
+            <img src="/public/images/logo.png" />
+          </div>
+
+          <!-- 레이아웃-Nav -->
+          <a class="layout-btn" href="../dashboard/dashboard.html">
+            <img
+              src="/public/icons/dashboard.svg"
+              alt="dashboard-icon"
+              width="24"
+              height="24"
+            />대시보드
+          </a>
+          <a class="layout-btn" href="../approval/approval.html">
+            <img
+              src="../../../../public/icons/approval.svg"
+              alt="approval-icon"
+              width="24"
+              height="24"
+            />전자결재
+          </a>
+          <a class="layout-btn" href="../notices/notices.html">
+            <img
+              src="/public/icons/notices.svg"
+              alt="notices-icon"
+              width="24"
+              height="24"
+            />공지사항
+          </a>
+          <a class="layout-btn" href="../mileage/mileage.html">
+            <img
+              src="/public/icons/mileage.svg"
+              alt="mileage-icon"
+              width="24"
+              height="24"
+            />마일리지
+          </a>
+          <a class="layout-btn" href="../mypage/mypage.html">
+            <img
+              src="/public/icons/mypage.svg"
+              alt="mypage-icon"
+              width="24"
+              height="24"
+            />마이페이지
+          </a>
+        </div>
+
+        <!-- 레이아웃-로그아웃 -->
+        <div class="logout">
+          <a class="layout-btn" href="/">
+            <img
+              src="/public/icons/logout.svg"
+              alt="logout-icon"
+              width="24"
+              height="24"
+            />로그아웃
+          </a>
+        </div>
+      </div>
+
+      <!-------------------------- 페이지 콘텐츠 -------------------------->
+      <div class="contents">
+        <h1 class="title">마일리지 > 마일리지 적립목록</h1>
+        <h2>마일리지 적립목록(12)</h2>
+        <div class="notice">
+          <div class="notice__header">
+            <h5 class="notice__title">제목</h5>
+            <h5 class="notice__registration-date">등록일</h5>
+            <h5 class="notice__mileage">마일리지</h5>
+          </div>
+
+          <div class="notice__list">
+            <div class="notice__item">
+              <h5 class="notice__title">제목입니다.</h5>
+              <h5 class="notice__registration-date">2024.02.02</h5>
+              <h5 class="notice__mileage">2</h5>
+            </div>
+            <div class="notice__item">
+              <h5 class="notice__title">제목입니다.</h5>
+              <h5 class="notice__registration-date">2024.02.02</h5>
+              <h5 class="notice__mileage">2</h5>
+            </div>
+            <div class="notice__item">
+              <h5 class="notice__title">제목입니다.</h5>
+              <h5 class="notice__registration-date">2024.02.02</h5>
+              <h5 class="notice__mileage">2</h5>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <a href="#">&laquo;</a>
+          <a href="#">1</a>
+          <a href="#" class="active">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a href="#">5</a>
+          <a href="#">6</a>
+          <a href="#">&raquo;</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

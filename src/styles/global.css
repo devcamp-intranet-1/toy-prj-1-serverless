@@ -162,7 +162,7 @@ button[data-color='neutral'][data-shape='line']:hover {
 }
 
 /* modal style */
-.modal {
+/* .modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,6 +171,7 @@ button[data-color='neutral'][data-shape='line']:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .modal__background {
@@ -205,4 +206,4 @@ button[data-color='neutral'][data-shape='line']:hover {
 
 .modalHidden {
   display: none;
-}
+} */

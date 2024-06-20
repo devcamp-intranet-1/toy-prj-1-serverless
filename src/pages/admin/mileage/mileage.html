@@ -10,9 +10,13 @@
       rel="stylesheet"
     />
     <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/component/modal/modal.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <!-- 페이지 CSS -->
-    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="mileage.css" />
   </head>
 
   <body>
@@ -58,13 +62,13 @@
               height="24"
             />마일리지
           </a>
-          <a class="layout-btn" href="../employees/employees.html">
+          <a class="layout-btn" href="../mypage/mypage.html">
             <img
               src="/public/icons/mypage.svg"
-              alt="employees-icon"
+              alt="mypage-icon"
               width="24"
               height="24"
-            />직원관리
+            />마이페이지
           </a>
         </div>
 
@@ -83,11 +87,110 @@
 
       <!-------------------------- 페이지 콘텐츠 -------------------------->
       <div class="contents">
-        <!-- 페이지 타이틀 -->
-        <h1 class="title">마일리지</h1>
+        <h1 class="title">마일리지 관리</h1>
 
-        <div class="content">각 페이지 당 콘텐츠 영역입니다.</div>
+        <div class="header">
+          <div class="header__toggle">
+            <!-- input checkbox의 토글 속성을 label로 연결시켜 활용 -->
+            <label class="switch">
+              <input type="checkbox" id="toggleSwitch" />
+              <span class="slider"></span>
+            </label>
+            <h4 id="toggleText">미확인</h4>
+          </div>
+
+          <h6>총 20개의 게시글</h6>
+        </div>
+
+        <div class="mileage-list"></div>
       </div>
     </div>
+
+    <!-- 모달 -->
+    <div class="modal modalHidden">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2>마일리지 신청</h2>
+          <img
+            src="/public/icons/close.svg"
+            alt="close-icon"
+            width="24"
+            height="24"
+          />
+        </div>
+
+        <form>
+          <div class="modal__form">
+            <div class="form-group">
+              <h5>카테고리</h5>
+              <select id="environment-category">
+                <option disabled selected>카테고리를 선택하세요.</option>
+                <option value="recycling">재활용 및 분리수거</option>
+                <option value="public-transport">
+                  대중교통 및 자전거 이용
+                </option>
+                <option value="energy-saving">에너지 절약</option>
+                <option value="reuse-upcycling">재사용 및 업사이클링</option>
+                <option value="eco-friendly-products">친환경 제품 구매</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <h5>점수</h5>
+              <select id="score">
+                <option value="" disabled selected>점수를 선택하세요.</option>
+                <option value="">1점</option>
+                <option value="">2점</option>
+                <option value="">3점</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <h5>제목</h5>
+              <input
+                data-shape="line"
+                type="text"
+                id="input4"
+                placeholder="내용을 입력해주세요."
+              />
+            </div>
+
+            <div class="form-group">
+              <h5>신청자</h5>
+              <input
+                data-shape="line"
+                type="text"
+                id="input5"
+                placeholder="내용을 입력해주세요."
+              />
+            </div>
+
+            <div class="form-group">
+              <h5>증빙자료</h5>
+              <input
+                data-shape="line"
+                type="file"
+                id=""
+                name=""
+                accept="image/png, image/jpeg"
+                multiple
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="modal__button"
+            data-color="positive"
+            data-shape="block"
+          >
+            신청하기
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../../component/modal/modal.js"></script>
+    <script src="mileage.js"></script>
   </body>
 </html>

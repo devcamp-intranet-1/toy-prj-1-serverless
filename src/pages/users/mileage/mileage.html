@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/src/styles/font.css" />
     <link rel="stylesheet" href="/src/styles/color.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/component/modal/modal.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="mileage.css" />
@@ -137,6 +138,7 @@
           </div>
           <div class="mileage-approve__btns">
             <button
+              onclick="window.location.href = 'mileageDetail.html'"
               data-color="positive"
               data-shape="line"
               class="mileage-approve__save-list"
@@ -146,7 +148,7 @@
             <button
               data-color="positive"
               data-shape="block"
-              class="mileage-approve__request"
+              class="mileage-approve__request modalOpenBtn"
             >
               마일리지 신청
             </button>
@@ -159,21 +161,95 @@
           </select>
           <h6>총 20개의 게시글</h6>
         </div>
-        <div class="mileage-list">
-          <div class="mileage-list__item">
-            <div class="mileage-list__title">
-              <h3>텀블러 마일리지 신청합니다.</h3>
-              <h5>2024-01-02</h5>
-            </div>
-          </div>
-          <div class="mileage-list__item"></div>
-          <div class="mileage-list__item"></div>
-          <div class="mileage-list__item"></div>
-          <div class="mileage-list__item"></div>
-        </div>
+        <div class="mileage-list"></div>
       </div>
     </div>
 
+    <!-- 모달 -->
+    <div class="modal modalHidden">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h2>마일리지 신청</h2>
+          <img
+            src="/public/icons/close.svg"
+            alt="close-icon"
+            width="24"
+            height="24"
+          />
+        </div>
+
+        <form>
+          <div class="modal__form">
+            <div class="form-group">
+              <h5>카테고리</h5>
+              <select id="environment-category">
+                <option disabled selected>카테고리를 선택하세요.</option>
+                <option value="recycling">재활용 및 분리수거</option>
+                <option value="public-transport">
+                  대중교통 및 자전거 이용
+                </option>
+                <option value="energy-saving">에너지 절약</option>
+                <option value="reuse-upcycling">재사용 및 업사이클링</option>
+                <option value="eco-friendly-products">친환경 제품 구매</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <h5>점수</h5>
+              <select id="score">
+                <option value="" disabled selected>점수를 선택하세요.</option>
+                <option value="">1점</option>
+                <option value="">2점</option>
+                <option value="">3점</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <h5>제목</h5>
+              <input
+                data-shape="line"
+                type="text"
+                id="input4"
+                placeholder="대중교통을 통한 출퇴근"
+              />
+            </div>
+
+            <div class="form-group">
+              <h5>신청자</h5>
+              <input
+                data-shape="line"
+                type="text"
+                id="input5"
+                placeholder="인사/대리/홍길동"
+              />
+            </div>
+
+            <div class="form-group">
+              <h5>증빙자료</h5>
+              <input
+                data-shape="line"
+                type="file"
+                id=""
+                name=""
+                accept="image/png, image/jpeg"
+                multiple
+              />
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="modal__button"
+            data-color="positive"
+            data-shape="block"
+          >
+            신청하기
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../../component/modal/modal.js"></script>
     <script src="mileage.js"></script>
   </body>
 </html>

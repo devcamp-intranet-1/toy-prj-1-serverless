@@ -1,8 +1,8 @@
 :root {
   /* color system */
   --color-pri-light: #64c99c;
-  --pri-normal: #40b883;
-  --pri-dark: #39a374;
+  --color-pri-normal: #40b883;
+  --color-pri-dark: #39a374;
 
   --color-sec-light: #353d55;
   --color-sec-normal: #212635;

@@ -160,8 +160,8 @@ button[data-color='neutral'][data-shape='line']:hover {
   background: var(--gray-09);
   color: var(--color-white);
 }
-/* modal style */
 
+/* modal style */
 .modal {
   display: flex;
   justify-content: center;

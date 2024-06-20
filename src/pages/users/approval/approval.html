@@ -10,9 +10,13 @@
       rel="stylesheet"
     />
     <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/global.css">
     <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="approval.css" />
   </head>
 
   <body>
@@ -85,9 +89,139 @@
       <div class="contents">
         <!-- 페이지 타이틀 -->
         <h1 class="title">전자결재</h1>
+        <div class="content__row">
+          <!-- tap형식 버튼 -->
+          <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event,'심사중')">
+              심사중
+            </button>
+            <button class="tab-link" onclick="openTab(event,'승인')">
+              승인
+            </button>
+            <button class="tab-link" onclick="openTab(event,'반려')">
+              반려
+            </button>
+          </div>
+          <!-- 결제신청 모달 버튼 -->
+          <button class="paymentRequest modalOpenBtn" >
+            결제 신청
+          </button>
+        </div>
 
-        <div class="content">각 페이지 당 콘텐츠 영역입니다.</div>
+        <!-- 결제신청 모달 -->
+        <div class="modal modalHidden">
+          <div class="modal__background"></div>
+          <div class="modal__content">
+            <span class="close__btn">&times;</span>
+            <h2>결제 신청</h2>
+            <label for="category"><h4>카테고리</h4></label>
+            <select>
+              <option value="반차">반차</option>
+              <option value="연차">연차</option>
+              <option value="조퇴">조퇴</option>
+              <option value="기타">기타</option>
+            </select>
+            <label for="title"><h4>제목</h4></label>
+            <input type="text" placeholder="내용을 입력해 주세요" />
+            <label for="Date"><h4>날짜</h4></label>
+            <div class="data__container">
+              <input type="date"/> 
+              <span>-</span>
+              <input type="date"/>
+            </div>
+            <label for="description"><h4>사유작성</h4></label>
+            <textarea
+              id="description"
+              placeholder="내용을 입력해 주세요"
+              maxlength="100"
+            ></textarea>
+            <button class="submit__Btn">신청하기</button>
+          </div>
+        </div>
+        
+        <!-- 게시글 상세 모달 -->
+        <!--
+        <div class="modal">
+          <div class="modal__content">
+            <span class="close-btn">&times;</span>
+            <h2>게시글 정보</h2>
+            <p><strong>카테고리 :</strong> <span id="detailCategory"></span></p>
+            <p><strong>제목:</strong> <span id="detailTitle"></span></p>
+            <p><strong>신청일:</strong> <span id="detailDate"></span></p>
+            <p>
+              <strong>사유작성:</strong> <span id="detailDescription"></span>
+            </p>
+          </div>
+        </div>
+        -->
+        <!-- 카테고리 selectbox -->
+        <div class="content">
+          <div class="filter">
+            <select>
+              <option value="all">카테고리 전체</option>
+              <option value="반차">반차</option>
+              <option value="연차">연차</option>
+              <option value="조퇴">조퇴</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="content">
+          <div id="심사중" class="tab-content active">
+            <table>
+              <thead>
+                <tr class="title">
+                  <th class="menu__tpye">종류</th>
+                  <th class="menu__title">제목</th>
+                  <th class="menu__date">신청일</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tbody id="boardContent">
+
+                </tbody>
+              </tbody>
+            </table>
+            <!-- 페이지네이션 구현하기 -->
+            <div>페이지네이션 구현</div>
+          </div>
+          <div id="승인" class="tab-content">
+            <table>
+              <thead>
+                <tr class="title">
+                  <th class="menu__tpye">종류</th>
+                  <th class="menu__title">제목</th>
+                  <th class="menu__date">신청일</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <!-- 페이지네이션 구현하기 -->
+            <div>페이지네이션 구현</div>
+          </div>
+          <div id="반려" class="tab-content">
+            <table>
+              <thead>
+                <tr class="title">
+                  <th class="menu__tpye">종류</th>
+                  <th class="menu__title">제목</th>
+                  <th class="menu__reason">반려사유</th>
+                  <th class="menu__date">신청일</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+              </tbody>
+            </table>
+            <!-- 페이지네이션 구현하기 -->
+            <div>페이지네이션 구현</div>
+          </div>
+        </div>
       </div>
     </div>
+    
+    <script src="../approval/approval.js"></script>
   </body>
 </html>

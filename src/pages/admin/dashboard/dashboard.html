@@ -10,6 +10,9 @@
       rel="stylesheet"
     />
     <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="dashboard.css" />
@@ -85,8 +88,15 @@
       <div class="contents">
         <!-- 페이지 타이틀 -->
         <h1 class="title">대시보드</h1>
-
-        <div class="content">각 페이지 당 콘텐츠 영역입니다.</div>
+        <div class="adminDashboard">
+          <h2>2024.06.14(금)</h2>
+          <div class="adminDashboard__attendance card">출결요약</div>
+          <div class="adminDashboard__container">
+            <div class="adminDashboard__schedule card">세부 일정</div>
+            <div class="adminDashboard__approval card">전자결재(승민)</div>
+          </div>
+          <div class="adminDashboard__mileage card">마일리지(혁준)</div>
+        </div>
       </div>
     </div>
   </body>

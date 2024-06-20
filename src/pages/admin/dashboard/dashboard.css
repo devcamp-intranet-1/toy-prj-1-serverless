@@ -1,0 +1,16 @@
+.adminDashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.adminDashboard__container {
+  display: flex;
+  gap: 24px;
+}

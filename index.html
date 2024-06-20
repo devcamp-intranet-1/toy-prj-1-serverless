@@ -16,12 +16,39 @@
     <link rel="stylesheet" href="public/login/login.css" />
     <link rel="stylesheet" href="src/styles/color.css" />
     <link rel="stylesheet" href="src/styles/font.css" />
+    <link rel="stylesheet" href="/public/login/login.css" />
   </head>
   <body>
-    <div class="container">
-      <h1>Login</h1>
-      <a href="src/pages/admin/dashboard/dashboard.html">Admin Login!</a>
-      <a href="src/pages/users/dashboard/dashboard.html">Users Login!</a>
-    </div>
+    <section class="loginLayout">
+      <div class="loginContainer">
+        <img src="/public/images/logo.png" alt="logo img" />
+        <form class="loginContainer__form">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="아이디를 입력해주세요."
+            data-shape="line"
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력해주세요."
+            data-shape="line"
+          />
+          <button
+            formaction="/src/pages/users/dashboard/dashboard.html"
+            data-shape="block"
+            data-color="positive"
+          >
+            로그인
+          </button>
+        </form>
+        <a href="src/pages/admin/dashboard/dashboard.html">
+          <h4>관리자 페이지로 이동</h4></a
+        >
+      </div>
+    </section>
   </body>
 </html>

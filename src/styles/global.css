@@ -162,7 +162,7 @@ button[data-color='neutral'][data-shape='line']:hover {
 }
 
 /* modal style */
-/* .modal {
+.modal {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,4 +205,4 @@ button[data-color='neutral'][data-shape='line']:hover {
 
 .modalHidden {
   display: none;
-} */
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAECO Intranet</title>
+    <!-- reset.css: 크로스 브라우징 이슈 방지 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+      rel="stylesheet"
+    />
+    <!-- 공용 컴포넌트 CSS -->
+    <link rel="stylesheet" href="../../../styles/global.css" />
+    <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="../../users/notices/notices.css" />
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <!-------------------------- 레이아웃 -------------------------->
+      <div class="layout">
+        <div class="layout-btns">
+          <!-- 레이아웃-로고 -->
+          <div class="logo">
+            <img src="/public/images/logo.png" />
+          </div>
+
+          <!-- 레이아웃-Nav -->
+          <a class="layout-btn" href="../dashboard/dashboard.html">
+            <img
+              src="/public/icons/dashboard.svg"
+              alt="dashboard-icon"
+              width="24"
+              height="24"
+            />대시보드
+          </a>
+          <a class="layout-btn" href="../approval/approval.html">
+            <img
+              src="../../../../public/icons/approval.svg"
+              alt="approval-icon"
+              width="24"
+              height="24"
+            />전자결재
+          </a>
+          <a class="layout-btn" href="../notices/notices.html">
+            <img
+              src="/public/icons/notices.svg"
+              alt="notices-icon"
+              width="24"
+              height="24"
+            />공지사항
+          </a>
+          <a class="layout-btn" href="../mileage/mileage.html">
+            <img
+              src="/public/icons/mileage.svg"
+              alt="mileage-icon"
+              width="24"
+              height="24"
+            />마일리지
+          </a>
+          <a class="layout-btn" href="../mypage/mypage.html">
+            <img
+              src="/public/icons/mypage.svg"
+              alt="mypage-icon"
+              width="24"
+              height="24"
+            />마이페이지
+          </a>
+        </div>
+
+        <!-- 레이아웃-로그아웃 -->
+        <div class="logout">
+          <a class="layout-btn" href="/">
+            <img
+              src="/public/icons/logout.svg"
+              alt="logout-icon"
+              width="24"
+              height="24"
+            />로그아웃
+          </a>
+        </div>
+      </div>
+
+      <!-------------------------- 페이지 콘텐츠 -------------------------->
+      <div class="contents">
+        <!-- 페이지 타이틀 -->
+        <h1 class="title">공지사항 관리</h1>
+        <div class="noticeDetail">
+            <div class="noticeDetail__backBtn">
+                 <a href="../notices/notices.html">
+                    <button data-color='neutral' data-shape='line'>뒤로가기</button>
+                </a>
+            </div>
+              <button class="modalOpenBtn" data-color="warning" data-shape='line'>삭제 테스트</button>
+            <input data-shape='underline' type="text" placeholder="제목을 입력해주세요." style="width: 100%;"></input>
+            <ul class="noticeDetail__info"></ul>
+            <textarea data-shape='transparent'placeholder="내용을 입력해주세요." ></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- 삭제 모달 영역 -->
+      <div class="modal modalHidden">
+        <div class="modal__background"></div>
+        <div class="modal__content">
+            <div class="modal__header"><h4>공지삭제</h4> 
+                <img
+                  src="/public/icons/close.svg"
+                  alt="close-icon"
+                  width="24"
+                  height="24"
+                />
+              </div>
+            <div class="noticeDeleteModal">
+                <h5>정말 삭제하시겠습니까?</h5>
+                <button data-color='warning'data-shape='block'>삭제</button>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="../../users/notices/notice.js"></script>
+    <script src="../../users/notices/paginate.js"></script>
+    <script src="../../users/notices/noticeDetail.js"></script>
+    <script src="../../../component/modal/modal.js"></script>
+  </body>
+</html>

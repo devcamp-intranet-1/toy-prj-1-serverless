@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAECO Intranet</title>
+    <!-- reset.css: 크로스 브라우징 이슈 방지 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css"
+      rel="stylesheet"
+    />
+    <!-- 공통 레이아웃 CSS -->
+    <link rel="stylesheet" href="/src/styles/layout.css" />
+    <link rel="stylesheet" href="/src/styles/color.css" />
+    <link rel="stylesheet" href="/src/styles/font.css" />
+    <!-- 페이지 CSS -->
+    <link rel="stylesheet" href="notices.css" />
+    <!-- 공용 컴포넌트 CSS -->
+    <link rel="stylesheet" href="../../../styles/global.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-------------------------- 레이아웃 -------------------------->
+      <div class="layout">
+        <div class="layout-btns">
+          <!-- 레이아웃-로고 -->
+          <div class="logo">
+            <img src="/public/images/logo.png" />
+          </div>
+
+          <!-- 레이아웃-Nav -->
+          <a class="layout-btn" href="../dashboard/dashboard.html">
+            <img
+              src="/public/icons/dashboard.svg"
+              alt="dashboard-icon"
+              width="24"
+              height="24"
+            />대시보드
+          </a>
+          <a class="layout-btn" href="../approval/approval.html">
+            <img
+              src="../../../../public/icons/approval.svg"
+              alt="approval-icon"
+              width="24"
+              height="24"
+            />전자결재
+          </a>
+          <a class="layout-btn" href="../notices/notices.html">
+            <img
+              src="/public/icons/notices.svg"
+              alt="notices-icon"
+              width="24"
+              height="24"
+            />공지사항
+          </a>
+          <a class="layout-btn" href="../mileage/mileage.html">
+            <img
+              src="/public/icons/mileage.svg"
+              alt="mileage-icon"
+              width="24"
+              height="24"
+            />마일리지
+          </a>
+          <a class="layout-btn" href="../mypage/mypage.html">
+            <img
+              src="/public/icons/mypage.svg"
+              alt="mypage-icon"
+              width="24"
+              height="24"
+            />마이페이지
+          </a>
+        </div>
+
+        <!-- 레이아웃-로그아웃 -->
+        <div class="logout">
+          <a class="layout-btn" href="/">
+            <img
+              src="/public/icons/logout.svg"
+              alt="logout-icon"
+              width="24"
+              height="24"
+            />로그아웃
+          </a>
+        </div>
+      </div>
+
+      <!-------------------------- 페이지 콘텐츠 -------------------------->
+      <div class="contents">
+        <!-- 페이지 타이틀 -->
+        <h1 class="title">공지사항>상세</h1>
+        <div class="noticeDetail">
+          <h2>토스페이 결제 취소 / 환불이 필요해요. 결제토스페이환불</h2>
+          <ul class="noticeDetail__info"></ul>
+          <h4>
+            제품의 교환 및 반품, 환불은 모두 통신판매업자인 가맹점의 정책을
+            따르기 때문에 가맹점으로 문의가 필요해요. [가맹점 문의 앱 경로]
+            '토스페이' → '내 쇼핑' → '문의하기' → 원하는 결제 내역 선택 → '1:1
+            문의' 혹은 '전화 문의' [바로가기 링크] ※ 주말 및 공휴일은 가맹점에서
+            고객님의 문의 내용 확인이 어려울 수 있는 점 양해 부탁드려요. ※
+            신선식품의 경우 상품의 가치가 신선도에 영향을 받기 때문에 단순변심에
+            의한 교환 및 환불이 어려울 수 있어요
+          </h4>
+          <a href="../notices/notices.html"
+            ><button class="priLineBtn">뒤로가기</button></a
+          >
+        </div>
+      </div>
+    </div>
+    <script src="../notices/noticeDetail.js"></script>
+  </body>
+</html>

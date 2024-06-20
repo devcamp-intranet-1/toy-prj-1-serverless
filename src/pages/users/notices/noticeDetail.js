@@ -1,5 +1,4 @@
 const ul = document.querySelector('.noticeDetail__info');
-console.log(ul);
 const items = [
   {
     title: '등록일',

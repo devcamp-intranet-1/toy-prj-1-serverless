@@ -1,0 +1,95 @@
+.page {
+  display: flex;
+  padding: 16px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background-color: var(--gray-01);
+}
+
+.page__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  margin-bottom: 4px;
+}
+
+.page__body {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-white);
+}
+
+.body__img {
+  position: relative;
+  width: 200px; 
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+
+#foreground {
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 20%;
+  height: 20%;
+  z-index: 2;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  padding-top: 30px;
+}
+
+.user__info label {
+  text-align: left;
+}
+
+.user__info li {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 10px;
+}
+
+.user__info li select,
+.user__info li input {
+  width: 200px;
+}
+
+.user__info span {
+  display: flex;
+  width: 190px;
+  padding: 16px;
+  align-items: center;
+  font-size: 16px;
+}

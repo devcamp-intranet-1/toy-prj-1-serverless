@@ -1,0 +1,44 @@
+.loginLayout {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.loginContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 400px;
+  gap: 16px;
+}
+
+.loginContainer img {
+  height: 78px;
+  width: auto;
+}
+
+.loginContainer > a {
+  width: 100%;
+}
+
+.loginContainer > a > h4 {
+  width: 100%;
+  text-align: end;
+}
+
+.loginContainer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.loginContainer__form > input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.loginContainer__form > a > button {
+  width: 100%;
+}

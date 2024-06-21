@@ -246,3 +246,14 @@ tbody td:last-child {
   background: var(--pri-normal, #40b883);
   color: var(--gray-01, #fcfcfc);
 }
+.detailmodal__content {
+  display: flex;
+  padding: var(--none, 0px) 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 12px;
+  height: 38px;
+  border-radius: var(--borderRadius, 4px);
+  border: var(--none, 1px) solid var(--gray-06);
+}

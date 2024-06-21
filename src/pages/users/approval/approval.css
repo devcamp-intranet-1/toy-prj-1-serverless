@@ -28,6 +28,12 @@ div.contents {
   width: var(--xs, 444px);
   align-items: flex-start;
 }
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
 .tab-link {
   flex: none;
   padding: 10px 20px;
@@ -181,4 +187,73 @@ table tr {
 }
 .menu__date {
   width: 160px;
+}
+
+tbody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+tbody tr {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+}
+
+tbody tr.title {
+  display: flex;
+  height: 38px;
+  padding: 0px 12px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+tbody td {
+  flex: 1 0 0;
+  padding: 12px;
+  border-bottom: 1px solid var(--gray-04);
+}
+
+tbody td:first-child {
+  flex: none;
+  width: 90px;
+}
+tbody td:last-child {
+  flex: none;
+  width: 160px;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.pagination button {
+  background: none;
+  border: none;
+}
+.pagination #pageNumber {
+  /*width: 32px;
+  padding: var(--none, 6px) var(--none, 0px);*/
+  background: var(--pri-normal, #40b883);
+  color: var(--gray-01, #fcfcfc);
+}
+.detailmodal__content {
+  display: flex;
+  padding: var(--none, 0px) 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 12px;
+  height: 38px;
+  border-radius: var(--borderRadius, 4px);
+  border: var(--none, 1px) solid var(--gray-06);
 }

@@ -31,6 +31,9 @@ div.contents {
 .tab-content {
   display: none;
 }
+.tab-content.active {
+  display: block;
+}
 .tab-link {
   flex: none;
   padding: 10px 20px;

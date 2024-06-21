@@ -5,8 +5,11 @@ const closeButton = modal.querySelector('.close__btn');
 const modalBackground = modal.querySelector('.modal__background');
 //submitBtn: 새 게시글을 제출하는 버튼.
 const submitBtn = document.getElementById('submitBtn');
+const detailModal = document.getElementById('detailModal');
+const closeDetailModalBtn = document.getElementById('closeDetailModalBtn');
 //boardContent: 게시판 내용이 표시될 HTML 요소.
 const boardContent = document.getElementById('boardContent');
+
 //detailCategory, detailTitle, detailDate, detailDescription: 게시글의 세부 정보를 표시하는 HTML 요소들.
 const detailCategory = document.getElementById('detailCategory');
 const detailTitle = document.getElementById('detailTitle');
@@ -29,6 +32,9 @@ openButton.addEventListener('click', displayModal);
 closeButton.addEventListener('click', displayModal);
 modalBackground.addEventListener('click', displayModal);
 submitBtn.addEventListener('click', displayModal);
+closeDetailModalBtn.onclick = function () {
+  detailModal.style.display = 'none';
+};
 
 submitBtn.onclick = function () {
   //사용자 입력값을 가져옵니다.
@@ -72,6 +78,9 @@ function renderBoard() {
 
   paginatedEntries.forEach((entry, index) => {
     const newRow = document.createElement('tr');
+    newRow.onclick = function () {
+      showDetailModal(entry);
+    };
 
     const categoryCell = document.createElement('td');
     categoryCell.textContent = entry.category;
@@ -90,7 +99,20 @@ function renderBoard() {
 
   updatePagination();
 }
-//페이지 이동
+function showDetailModal(entry) {
+  detailCategory.textContent = entry.category;
+  detailTitle.textContent = entry.title;
+  detailDate.textContent = `${entry.startDate} - ${entry.endDate}`;
+  detailDescription.textContent = entry.description;
+  detailModal.style.display = 'block';
+}
+/*
+//현제 페이지 이동
+function updatePagination() {
+  pageNumber.textContent = currentPage;
+  prevBtn.disabled = currentPage === 1;
+  nextBtn.disabled = currentPage === Math.ceil(entries.length / entriesPerPage);
+}*/
 //현제 페이지가 1보다 크면 현재 페이지를 1 감소시키고 게시판을 다시 렌더링합니다.
 prevBtn.onclick = function () {
   if (currentPage > 1) {

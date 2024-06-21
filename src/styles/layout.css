@@ -1,54 +1,80 @@
 /*************** 전체 레이아웃 ***************/
-* {
-  /* outline: 1px solid red; */
-}
 body {
   width: 100vw;
   height: 100vh;
 }
+
 div.container {
   width: 100%;
   height: 100%;
   display: flex;
 }
+
 /*************** 좌측 레이아웃 ***************/
-div.container > .layout {
-  min-width: 220px;
+.h4 {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: 500;
+}
+
+div.container>.layout {
+  width: 220px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: #575b6d;
 }
-div.container > .layout > .layout-btns {
-  height: 600px;
+
+div.container>.layout>.layout-btns {
+  height: 276px;
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-div.container > .layout > .layout-btns > .logo {
-  padding: 6px 20px 10px;
-  margin-bottom: 10px;
-  height: 44px;
+
+div.container>.layout>.layout-btns>.logo {
+  width: 188px;
+  height: 32px;
+  padding: 6px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-div.container > .layout > .layout-btns > .logo > img {
-  height: 100%;
+
+div.container>.layout>.layout-btns>.logo>img {
+  height: 24px;
+  /* width: 55px; */
+  padding: 4px;
 }
-div.container > .layout > .layout-btns > .layout-btn,
-div.container > .layout > .logout > .layout-btn {
-  height: 70px;
-  padding: 10px 0 10px 20px;
+
+div.container>.layout>.layout-btns>div {
+  width: 100%;
+  height: 220px;
+}
+
+div.container>.layout>.layout-btns>div>.layout-btn,
+div.container>.layout>.logout>.layout-btn {
+  height: 24px;
+  padding: 10px 0 10px 16px;
   display: flex;
   align-items: center;
   gap: 8px;
   color: #575b6d;
-  font-weight: 500;
   text-decoration: none;
-  transition: 0.3s;
+  transition: .4s;
 }
-div.container > .layout > .layout-btns > .layout-btn:hover {
+
+div.container>.layout>.layout-btns>div>.layout-btn:hover {
   background-color: #40b883;
   color: white;
 }
 
-/*************** 좌측 레이아웃 ***************/
+div.container>.layout>.logout{
+  margin-bottom: 12px;
+}
+/*************** 우측 레이아웃 ***************/
 .contents {
   flex: 1;
   padding: 16px 24px;

@@ -128,3 +128,5 @@ fetch(jsonFilePath)
     });
   })
   .catch((error) => console.error('Error fetching JSON:', error));
+
+// TODO: 페이지네이션 << >> 아이콘 추가

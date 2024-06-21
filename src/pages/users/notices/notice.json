@@ -399,6 +399,22 @@
       "date": "2024-04-30",
       "attachments": ["file50_1.pdf", "file50_2.pdf"],
       "views": 700
+    },
+    {
+      "index": 51,
+      "title": "게시물 51",
+      "author": "작성자51",
+      "date": "2024-04-30",
+      "attachments": ["file50_1.pdf", "file50_2.pdf"],
+      "views": 700
+    },
+    {
+      "index": 52,
+      "title": "게시물 52",
+      "author": "작성자52",
+      "date": "2024-04-30",
+      "attachments": ["file50_1.pdf", "file50_2.pdf"],
+      "views": 700
     }
   ]
 }

@@ -90,30 +90,34 @@
       <!-------------------------- 페이지 콘텐츠 -------------------------->
       <div class="page">
         <!-- 페이지 타이틀 -->
-        <h1 class="page__title">직원 관리 > 직원 추가</h1>
+        <h1 class="page__title">직원 관리 > 직원 상세</h1>
 
+        <!-- 상단 삭제/수정 버튼 부분입니다. -->
         <div class="page__content">
           <div class="page__button">
-          <button data-color='neutral' data-shape='line'>삭제하기</button>
+          <button data-color='warning' data-shape='block'>삭제하기</button>
           <button data-color='positive' data-shape='block'>수정하기</button>
           </div>
 
-          <div class="page__image">
+          <!-- 직원 프로필 이미지 업로드 부분입니다. -->
+          <div class="page__edit">
             <img src="/public/images/_Avatar_.png" alt="profileimg">
-            <button data-color='neutral' data-shape='line'>이미지 등록</button>
-            <button data-color='neutral' data-shape='line'>이미지 변경</button>
+            <div class="edit-btn">
+              <button data-color='neutral' data-shape='line'>이미지 등록</button>
+              <button data-color='neutral' data-shape='line'>이미지 변경</button>
+            </div>
           </div>
           
+          <!-- 직원 상세 정보 수정 부분입니다. -->
           <form action="#" method="post">
             <ul class="user__info">
               <li class="info__name">
-                <label for="name"><span>이름</span></label>
-                <input data-shape="line" type="name" placeholder="홍길동"/>
+                <label for="name"><h5>이름</h5></label>
+                <input data-shape="line" type="name" id="name" placeholder="홍길동"/>
               </li>
-              <!-- label을 쓰는거랑 div 쓰는거 label이 더 나은건지 ?? 상관없는지 ??? -->
 
               <li class="info__position">
-                <label for="positions"><span>직함</span></label>
+                <label for="positions"><h5>직함</h5></label>
                 <select name="positions" id="positions" required>
                   <option value="사장">사장</option>
                   <option value="부장">부장</option>
@@ -125,25 +129,24 @@
               </li>
 
               <li class="info__email">
-                <label for="email"><span>이메일</span></label>
-                <input data-shape="line" type="email" placeholder="eco@taeco.com"/>
+                <label for="email"><h5>이메일</h5></label>
+                <input data-shape="line" type="email" id="email" placeholder="eco@taeco.com"/>
               </li>
 
               <li class="info__phonenumber">
-                <label for="phone"><span>전화번호</span></label>
-                <input data-shape="line" type="phonenumber" placeholder="010-0000-0000"/>
+                <label for="phone"><h5>전화번호</h5></label>
+                <input data-shape="line" type="number" id="phone" placeholder="010-0000-0000"/>
               </li>
 
               <li class="info__birthday">
-                <label for="birthday"><span>생일</span></label>
-                <input data-shape="line" type="birthday" placeholder="1900.00.00"/>
+                <label for="birthday"><h5>생일</h5></label>
+                <input data-shape="line" type="date" id="birthday" placeholder="1900.00.00"/>
               </li>
               
               <li class="info__joinday">
-                <label for="birthday"><span>입사일</span></label>
-                <input data-shape="line" type="joinday" placeholder="1900.00.00"/>
+                <label for="joinday"><h5>입사일</h5></label>
+                <input data-shape="line" type="date" id="joinday" placeholder="1900.00.00"/>
               </li>
-              <!-- 생일이랑 입사일 직접 입력 ? 아니면 달력에서 선택 ? ㅠ -->
             </ul>
           </form>
         </div>

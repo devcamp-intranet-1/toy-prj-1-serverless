@@ -3,20 +3,20 @@
   padding: 16px;
   flex-direction: column;
   align-items: flex-start;
+  align-self: stretch;
   gap: 12px;
   flex: 1 0 0;
-  align-self: stretch;
 }
 
 .page__content {
   display: flex;
-padding: 16px;
-flex-direction: column;
-align-items: flex-start;
-gap: 12px;
-flex: 1 0 0;
-align-self: stretch;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  align-self: stretch;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .page__button {
@@ -35,6 +35,7 @@ align-self: stretch;
   align-items: center;
   gap: 2px;
   align-self: stretch;
+  border-bottom: 1px solid var(--gray-05);
 }
 
 .page__edit img {
@@ -80,4 +81,19 @@ flex-direction: row;
 #positions {
   width: 327px;
   box-sizing: border-box;
+}
+
+.modal__content {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
+  0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.modal img {
+  width: 24px;
+  height: 24px;
+}
+
+.modal button {
+  width: 100%;
+  margin-top: 16px;
 }

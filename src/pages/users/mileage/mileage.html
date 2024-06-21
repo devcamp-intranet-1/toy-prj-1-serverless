@@ -109,7 +109,7 @@
               </h4>
             </div>
           </div>
-          <h4 class="mileage-score__right">
+          <h4 class="mileage-score__right modalOpenBtn">
             마일리지 기준 알아보기<svg
               width="20"
               height="20"
@@ -165,8 +165,9 @@
       </div>
     </div>
 
-    <!-- 모달 -->
-    <div class="modal modalHidden">
+    <!------------ 마일리지 신청 ------------>
+    <div class="modal modalHidden " >
+      <div class="modal__background"></div>
       <div class="modal__content">
         <div class="modal__header">
           <h2>마일리지 신청</h2>
@@ -246,6 +247,23 @@
             신청하기
           </button>
         </form>
+      </div>
+    </div>
+
+    <!------------ 마일리지 기준 알아보기 ------------>
+    <div class="modal modalHidden">
+      <div class="modal__background"></div>
+      <div class="modal__content">
+        <div class="modal__header">
+          <h4>title</h4>
+          <img
+            src="/public/icons/close.svg"
+            alt="close-icon"
+            width="24"
+            height="24"
+          />
+        </div>
+        <div>contents 작성</div>
       </div>
     </div>
 

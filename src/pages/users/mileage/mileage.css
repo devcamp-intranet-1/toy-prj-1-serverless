@@ -3,7 +3,6 @@
   gap: 12px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 .mileage-score {
@@ -39,6 +38,10 @@
   fill: var(--gray-06);
   display: flex;
   align-items: center;
+}
+
+.mileage-score__right:hover {
+  cursor: pointer;
 }
 
 .mileage-score__detail {
@@ -114,25 +117,30 @@
 }
 
 .mileage-list {
-  /* border: 1px solid red; */
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  gap: 24px;
+  gap: 12px;
+  overflow: auto;
 }
-
 .mileage-list__item {
-  /* border: 1px solid red; */
-  width: calc(33.333% - 16px);
-  height: 312px;
+  width: calc(25% - 9px);
+  /* height: 312px; */
+  /* height를 width와 동일하게 설정 */
+  aspect-ratio: 1 / 1;
   background-size: cover;
   background-position: center;
   border-radius: 9px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
   /* 상대 위치 설정 */
   overflow: hidden;
+  transition: .4s;
+}
+.mileage-list__item:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* 검은 색 필터를 위한 가상 요소 */

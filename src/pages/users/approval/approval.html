@@ -103,31 +103,31 @@
             </button>
           </div>
           <!-- 결제신청 모달 버튼 -->
-          <button class="paymentRequest modalOpenBtn" >
+          <button class="paymentRequest modalOpenBtn" id="openModalBtn" >
             결제 신청
           </button>
         </div>
 
         <!-- 결제신청 모달 -->
-        <div class="modal modalHidden">
+        <div class="modal modalHidden" id="modal">
           <div class="modal__background"></div>
           <div class="modal__content">
-            <span class="close__btn">&times;</span>
+            <span class="close__btn" id="closeModalBtn">&times;</span>
             <h2>결제 신청</h2>
             <label for="category"><h4>카테고리</h4></label>
-            <select>
+            <select id="category">
               <option value="반차">반차</option>
               <option value="연차">연차</option>
               <option value="조퇴">조퇴</option>
               <option value="기타">기타</option>
             </select>
             <label for="title"><h4>제목</h4></label>
-            <input type="text" placeholder="내용을 입력해 주세요" />
-            <label for="Date"><h4>날짜</h4></label>
+            <input type="text" id="title" placeholder="내용을 입력해 주세요" />
+            <label for="startDate"><h4>날짜</h4></label>
             <div class="data__container">
-              <input type="date"/> 
-              <span>-</span>
-              <input type="date"/>
+              <input type="date" id="startDate"/> 
+              <span> - </span>
+              <input type="date" id="endDate"/>
             </div>
             <label for="description"><h4>사유작성</h4></label>
             <textarea
@@ -135,25 +135,23 @@
               placeholder="내용을 입력해 주세요"
               maxlength="100"
             ></textarea>
-            <button class="submit__Btn">신청하기</button>
+            <button class="submit__Btn" id="submitBtn">신청하기</button>
           </div>
         </div>
         
         <!-- 게시글 상세 모달 -->
         <!--
-        <div class="modal">
+        <div id="detailModal" class="modal">
           <div class="modal__content">
             <span class="close-btn">&times;</span>
-            <h2>게시글 정보</h2>
+            <h2>결제</h2>
             <p><strong>카테고리 :</strong> <span id="detailCategory"></span></p>
             <p><strong>제목:</strong> <span id="detailTitle"></span></p>
             <p><strong>신청일:</strong> <span id="detailDate"></span></p>
-            <p>
-              <strong>사유작성:</strong> <span id="detailDescription"></span>
-            </p>
+            <p><strong>사유작성:</strong> <span id="detailDescription"></span></p>
           </div>
         </div>
-        -->
+      -->
         <!-- 카테고리 selectbox -->
         <div class="content">
           <div class="filter">
@@ -178,13 +176,15 @@
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                    <td>반차</td>
+                    <td>반차 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
                 <tbody id="boardContent">
-
                 </tbody>
               </tbody>
             </table>
-            <!-- 페이지네이션 구현하기 -->
-            <div>페이지네이션 구현</div>
           </div>
           <div id="승인" class="tab-content">
             <table>
@@ -196,10 +196,29 @@
                 </tr>
               </thead>
               <tbody>
+                <tr>
+                    <td>연차</td>
+                    <td>연차 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
+                <tr>
+                    <td>조퇴</td>
+                    <td>조퇴 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
+                <tr>
+                    <td>기타</td>
+                    <td>병가 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
+                <tr>
+                    <td>기타</td>
+                    <td>병가 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
+                
               </tbody>
             </table>
-            <!-- 페이지네이션 구현하기 -->
-            <div>페이지네이션 구현</div>
           </div>
           <div id="반려" class="tab-content">
             <table>
@@ -212,11 +231,27 @@
                 </tr>
               </thead>
               <tbody>
-                
+                <tr>
+                    <td>기타</td>
+                    <td>병가 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
+                <tr>
+                    <td>기타</td>
+                    <td>병가 신청</td>
+                    <td>2021-01-01</td>
+                </tr>
               </tbody>
             </table>
-            <!-- 페이지네이션 구현하기 -->
-            <div>페이지네이션 구현</div>
+          </div>
+          <!-- 페이지네이션 구현하기 -->
+          <div id="pagination" class="pagination">
+            <button id="prevBtn">&laquo;</button>
+            <button class = "pageNumger__btn active" id="pageNumber">1</button>
+            <button class = "pageNumger__btn" >2</button>
+            <button class = "pageNumger__btn" >3</button>
+            <button class = "pageNumger__btn" >4</button>
+            <button id="nextBtn">&raquo;</button>
           </div>
         </div>
       </div>

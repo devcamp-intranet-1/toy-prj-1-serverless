@@ -38,29 +38,56 @@
 .table-container {
   overflow-y: auto;
   width: 100%;
+  display: flex;
 }
 
 table {
   width: 100%;
 }
 
-table tr {
-  border-bottom: 1px solid var(--gray-05); 
-  font-size: 14px;
-
-}
-
-.userlist {
+thead {
   position: sticky;
   top: 0;
   background-color: var(--gray-01);
 }
 
+tr {
+  font-size: 14px;
+}
+
+th {
+  font-size: var(h5);
+  height: 10px;
+}
+
+tbody {
+  text-align: center;
+  font-size: var(h5);
+}
+
+tbody td {
+  vertical-align: middle;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--gray-05);
+}
+
+/* table tr {
+  border-bottom: 1px solid var(--gray-05); 
+  font-size: 14px;
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+
+
 tbody tr td {
   text-align: center;
 }
-
-#employeeTableBody td {
+*/
+/* #employeeTableBody td {
   height: 100px;
   vertical-align: middle;
-}
+} */

@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/src/styles/global.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
 
-    <!-- 직원 리스트 불러올 js -->
+    <!-- 직원 리스트 데이터 JS -->
     <script defer src="employees.js"></script>
   </head>
 
@@ -98,29 +98,29 @@
         <div class="page__event">
           <span class="event__birthday"><h3>금일의 생일자: 홍길동</h3></span>
           <span class="event__joinday"><h3>금일의 입사자: 홍길동</h3></span>
-          <!-- 생일, 입사일이랑 어떻게 연결해서 이름을 표시 ..? -->
+          
         </div>
         <div class="page__header">
           <input type="search" id="search" name="search" placeholder="검색">
-          <button data-color='positive' data-shape='block'>직원 추가</button>
+          <button data-color='positive' data-shape='block' onclick="location.href='addemployee.html'">직원 추가</button>
         </div>
         <div class="total"><h5>총 12명</h5></div> 
-        <!-- 얘는 어떻게 구현하지 .. 어떻게 직원 다 더해서 표시할까 .. -->
+        
         <div class="table-container">
           <table>
             <thead class="userlist">
               <tr>
-                <th class="userlist__profileimg">사진</th>
-                <th class="userlist__name">이름</th>
-                <th class="userlist__email">이메일</th>
-                <th class="uselist__position">직함</th>
-                <th class="userlist__birthday">생일</th>
-                <th class="userlist__joinday">입사일</th>
-                <th class="userlist__phonenumber">핸드폰 번호</th>
+                <th class="profileimg">사진</th>
+                <th class="name">이름</th>
+                <th class="email">이메일</th>
+                <th class="position">직함</th>
+                <th class="birthday">생일</th>
+                <th class="joinday">입사일</th>
+                <th class="phonenumber">핸드폰 번호</th>
               </tr>
             </thead>
             <tbody id="employeeTableBody"></tbody>
-            <!-- html에 직원 다 쓸 수 없어서 일단 js로 보내버림 -->
+            
           </table>
         </div>
       </div>

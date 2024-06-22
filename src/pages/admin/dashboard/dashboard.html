@@ -22,58 +22,69 @@
     <div class="container">
       <!-------------------------- 레이아웃 -------------------------->
       <div class="layout">
-        <div class="layout-btns">
-          <!-- 레이아웃-로고 -->
-          <div class="logo">
+        <!-- 상단 부분 -->
+        <div class="layout__top">
+          <!-- 로고 -->
+          <div class="layout__logo">
             <img src="/public/images/logo.png" />
           </div>
 
-          <!-- 레이아웃-Nav -->
-          <a class="layout-btn" href="../dashboard/dashboard.html">
-            <img
-              src="/public/icons/dashboard.svg"
-              alt="dashboard-icon"
-              width="24"
-              height="24"
-            />대시보드
-          </a>
-          <a class="layout-btn" href="../approval/approval.html">
-            <img
-              src="../../../../public/icons/approval.svg"
-              alt="approval-icon"
-              width="24"
-              height="24"
-            />전자결재
-          </a>
-          <a class="layout-btn" href="../notices/notices.html">
-            <img
-              src="/public/icons/notices.svg"
-              alt="notices-icon"
-              width="24"
-              height="24"
-            />공지사항
-          </a>
-          <a class="layout-btn" href="../mileage/mileage.html">
-            <img
-              src="/public/icons/mileage.svg"
-              alt="mileage-icon"
-              width="24"
-              height="24"
-            />마일리지
-          </a>
-          <a class="layout-btn" href="../employees/employees.html">
-            <img
-              src="/public/icons/mypage.svg"
-              alt="employees-icon"
-              width="24"
-              height="24"
-            />직원관리
-          </a>
+          <!-- 네비게이션 -->
+          <div class="layout__nav">
+            <a class="layout__item h4" href="../dashboard/dashboard.html">
+              <img
+                src="/public/icons/dashboard.svg"
+                alt="dashboard-icon"
+                width="24"
+                height="24"
+              />대시보드
+            </a>
+            <a class="layout__item h4" href="../approval/approval.html">
+              <img
+                src="../../../../public/icons/approval.svg"
+                alt="approval-icon"
+                width="24"
+                height="24"
+              />전자결재
+            </a>
+            <a class="layout__item h4" href="../mileages/notices.html">
+              <img
+                src="/public/icons/notices.svg"
+                alt="notices-icon"
+                width="24"
+                height="24"
+              />공지사항
+            </a>
+            <a class="layout__item h4" href="../mileage/mileage.html">
+              <img
+                src="/public/icons/mileage.svg"
+                alt="mileage-icon"
+                width="24"
+                height="24"
+              />마일리지
+            </a>
+            <a class="layout__item h4" href="../mypage/mypage.html">
+              <img
+                src="/public/icons/mypage.svg"
+                alt="mypage-icon"
+                width="24"
+                height="24"
+              />마이페이지
+            </a>
+          </div>
         </div>
 
-        <!-- 레이아웃-로그아웃 -->
-        <div class="logout">
-          <a class="layout-btn" href="/">
+        <!-- 하단 부분 -->
+        <div class="layout__bottom h4">
+          <div class="layout__item" href="/">
+            <img
+              src="/public/images/_Avatar_.png"
+              alt="logout-icon"
+              width="24"
+              height="24"
+            />홍길동
+          </div>
+          <a class="layout__item" href="/">
             <img
               src="/public/icons/logout.svg"
               alt="logout-icon"
@@ -95,7 +106,52 @@
             <div class="adminDashboard__schedule card">세부 일정</div>
             <div class="adminDashboard__approval card">전자결재(승민)</div>
           </div>
-          <div class="adminDashboard__mileage card">마일리지(혁준)</div>
+          <div class="adminDashboard__mileage card">
+            <!-- 마일리지 콘텐츠 -->
+            <div class="adminDashboard__mileage-title">
+              <div class="adminDashboard__mileage-title--left">
+                <h2>마일리지</h2>
+                <h4>미확인 신청 내역만 보여집니다.</h4>
+              </div>
+              <h4 class="adminDashboard__mileage-title--right">
+                <a href="/src/pages/admin/mileage/mileage.html"
+                  >마일리지페이지로 이동</a
+                ><svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.78112 8.00047L5.48126 4.70062L6.42408 3.75781L10.6667 8.00047L6.42408 12.2431L5.48126 11.3003L8.78112 8.00047Z"
+                  />
+                </svg>
+              </h4>
+            </div>
+            <ul class="mileage__contents h5">
+              <li class="mileage__header">
+                <div class="mileage__title">제목</div>
+                <div class="mileage__requester">요청자</div>
+                <div class="mileage__request-date">요청일</div>
+              </li>
+
+              <li class="mileage__row">
+                <div class="mileage__title">제목입니다.</div>
+                <div class="mileage__requester">홍길동</div>
+                <div class="mileage__request-date">2024.02.02</div>
+              </li>
+              <li class="mileage__row">
+                <div class="mileage__title">제목입니다.</div>
+                <div class="mileage__requester">홍길동</div>
+                <div class="mileage__request-date">2024.02.02</div>
+              </li>
+              <li class="mileage__row">
+                <div class="mileage__title">제목입니다.</div>
+                <div class="mileage__requester">홍길동</div>
+                <div class="mileage__request-date">2024.02.02</div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

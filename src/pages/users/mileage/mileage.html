@@ -23,58 +23,69 @@
     <div class="container">
       <!-------------------------- 레이아웃 -------------------------->
       <div class="layout">
-        <div class="layout-btns">
-          <!-- 레이아웃-로고 -->
-          <div class="logo">
+        <!-- 상단 부분 -->
+        <div class="layout__top">
+          <!-- 로고 -->
+          <div class="layout__logo">
             <img src="/public/images/logo.png" />
           </div>
 
-          <!-- 레이아웃-Nav -->
-          <a class="layout-btn" href="../dashboard/dashboard.html">
-            <img
-              src="/public/icons/dashboard.svg"
-              alt="dashboard-icon"
-              width="24"
-              height="24"
-            />대시보드
-          </a>
-          <a class="layout-btn" href="../approval/approval.html">
-            <img
-              src="../../../../public/icons/approval.svg"
-              alt="approval-icon"
-              width="24"
-              height="24"
-            />전자결재
-          </a>
-          <a class="layout-btn" href="../notices/notices.html">
-            <img
-              src="/public/icons/notices.svg"
-              alt="notices-icon"
-              width="24"
-              height="24"
-            />공지사항
-          </a>
-          <a class="layout-btn" href="../mileage/mileage.html">
-            <img
-              src="/public/icons/mileage.svg"
-              alt="mileage-icon"
-              width="24"
-              height="24"
-            />마일리지
-          </a>
-          <a class="layout-btn" href="../mypage/mypage.html">
-            <img
-              src="/public/icons/mypage.svg"
-              alt="mypage-icon"
-              width="24"
-              height="24"
-            />마이페이지
-          </a>
+          <!-- 네비게이션 -->
+          <div class="layout__nav">
+            <a class="layout__item h4" href="../dashboard/dashboard.html">
+              <img
+                src="/public/icons/dashboard.svg"
+                alt="dashboard-icon"
+                width="24"
+                height="24"
+              />대시보드
+            </a>
+            <a class="layout__item h4" href="../approval/approval.html">
+              <img
+                src="../../../../public/icons/approval.svg"
+                alt="approval-icon"
+                width="24"
+                height="24"
+              />전자결재
+            </a>
+            <a class="layout__item h4" href="../notices/notices.html">
+              <img
+                src="/public/icons/notices.svg"
+                alt="notices-icon"
+                width="24"
+                height="24"
+              />공지사항
+            </a>
+            <a class="layout__item h4" href="../mileage/mileage.html">
+              <img
+                src="/public/icons/mileage.svg"
+                alt="mileage-icon"
+                width="24"
+                height="24"
+              />마일리지
+            </a>
+            <a class="layout__item h4" href="../mypage/mypage.html">
+              <img
+                src="/public/icons/mypage.svg"
+                alt="mypage-icon"
+                width="24"
+                height="24"
+              />마이페이지
+            </a>
+          </div>
         </div>
 
-        <!-- 레이아웃-로그아웃 -->
-        <div class="logout">
-          <a class="layout-btn" href="/">
+        <!-- 하단 부분 -->
+        <div class="layout__bottom h4">
+          <div class="layout__item" href="/">
+            <img
+                src="/public/images/_Avatar_.png"
+                alt="logout-icon"
+              width="24"
+              height="24"
+            />홍길동
+          </div>
+          <a class="layout__item" href="/">
             <img
               src="/public/icons/logout.svg"
               alt="logout-icon"
@@ -166,7 +177,7 @@
     </div>
 
     <!------------ 마일리지 신청 ------------>
-    <div class="modal modalHidden " >
+    <div class="modal modalHidden">
       <div class="modal__background"></div>
       <div class="modal__content">
         <div class="modal__header">
@@ -206,23 +217,13 @@
             </div>
 
             <div class="form-group">
-              <h5>제목</h5>
-              <input
-                data-shape="line"
-                type="text"
-                id="input4"
-                placeholder="대중교통을 통한 출퇴근"
-              />
+              <h5>신청자</h5>
+              <input data-shape="line" type="text" placeholder="대리/홍길동" />
             </div>
 
             <div class="form-group">
-              <h5>신청자</h5>
-              <input
-                data-shape="line"
-                type="text"
-                id="input5"
-                placeholder="인사/대리/홍길동"
-              />
+              <h5>신청일자</h5>
+              <input data-shape="line" type="date" />
             </div>
 
             <div class="form-group">

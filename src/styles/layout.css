@@ -47,6 +47,7 @@ div.container>.layout>.layout__top>.layout__logo>img {
   height: 24px;
   /* width: 55px; */
   padding: 4px;
+
 }
 
 div.container>.layout>.layout__top>.layout__nav {
@@ -61,19 +62,23 @@ div.container>.layout>.layout__bottom>.layout__item {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #575b6d;
+  color: var(--gray-08);
+  fill: var(--gray-08);
   text-decoration: none;
   transition: .4s;
 }
 
 div.container>.layout>.layout__top>.layout__nav>.layout__item:hover {
-  background-color: #40b883;
-  color: white;
+  background-color: var(--color-pri-normal);
+  color: var(--color-white);
+  fill: var(--color-white);
 }
 
-div.container>.layout>.layout__bottom{
+div.container>.layout>.layout__bottom {
   margin-bottom: 12px;
 }
+
+
 /*************** 우측 레이아웃 ***************/
 .contents {
   flex: 1;

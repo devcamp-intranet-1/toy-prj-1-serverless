@@ -23,60 +23,69 @@
     <div class="container">
       <!-------------------------- 레이아웃 -------------------------->
       <div class="layout">
-        <div class="layout-btns">
-          <!-- 레이아웃-로고 -->
-          <div class="logo">
-            <img
-              src="/public/images/logo.png"
-            />
+        <!-- 상단 부분 -->
+        <div class="layout__top">
+          <!-- 로고 -->
+          <div class="layout__logo">
+            <img src="/public/images/logo.png" />
           </div>
 
-          <!-- 레이아웃-Nav -->
-          <a class="layout-btn" href="../dashboard/dashboard.html">
-            <img
-              src="/public/icons/dashboard.svg"
-              alt="dashboard-icon"
-              width="24"
-              height="24"
-            />대시보드
-          </a>
-          <a class="layout-btn" href="../approval/approval.html">
-            <img
-              src="../../../../public/icons/approval.svg"
-              alt="approval-icon"
-              width="24"
-              height="24"
-            />전자결재
-          </a>
-          <a class="layout-btn" href="../notices/notices.html">
-            <img
-              src="/public/icons/notices.svg"
-              alt="notices-icon"
-              width="24"
-              height="24"
-            />공지사항
-          </a>
-          <a class="layout-btn" href="../mileage/mileage.html">
-            <img
-              src="/public/icons/mileage.svg"
-              alt="mileage-icon"
-              width="24"
-              height="24"
-            />마일리지
-          </a>
-          <a class="layout-btn" href="../mypage/mypage.html">
-            <img
-              src="/public/icons/mypage.svg"
-              alt="mypage-icon"
-              width="24"
-              height="24"
-            />마이페이지
-          </a>
+          <!-- 네비게이션 -->
+          <div class="layout__nav">
+            <a class="layout__item h4" href="../dashboard/dashboard.html">
+              <img
+                src="/public/icons/dashboard.svg"
+                alt="dashboard-icon"
+                width="24"
+                height="24"
+              />대시보드
+            </a>
+            <a class="layout__item h4" href="../approval/approval.html">
+              <img
+                src="../../../../public/icons/approval.svg"
+                alt="approval-icon"
+                width="24"
+                height="24"
+              />전자결재
+            </a>
+            <a class="layout__item h4" href="../notices/notices.html">
+              <img
+                src="/public/icons/notices.svg"
+                alt="notices-icon"
+                width="24"
+                height="24"
+              />공지사항
+            </a>
+            <a class="layout__item h4" href="../mileage/mileage.html">
+              <img
+                src="/public/icons/mileage.svg"
+                alt="mileage-icon"
+                width="24"
+                height="24"
+              />마일리지
+            </a>
+            <a class="layout__item h4" href="../mypage/mypage.html">
+              <img
+                src="/public/icons/mypage.svg"
+                alt="mypage-icon"
+                width="24"
+                height="24"
+              />마이페이지
+            </a>
+          </div>
         </div>
 
-          <!-- 레이아웃-로그아웃 -->
-        <div class="logout">
-          <a class="layout-btn" href="/">
+        <!-- 하단 부분 -->
+        <div class="layout__bottom h4">
+          <div class="layout__item" href="/">
+            <img
+              src="/public/images/_Avatar_.png"
+              alt="logout-icon"
+              width="24"
+              height="24"
+            />홍길동
+          </div>
+          <a class="layout__item" href="/">
             <img
               src="/public/icons/logout.svg"
               alt="logout-icon"
@@ -94,21 +103,21 @@
 
         <div class="page__header">
           <h2>내 정보</h2>
-          <button data-color='positive' data-shape='block'>정보 수정</button>
+          <button data-color="positive" data-shape="block">정보 수정</button>
         </div>
         <div class="page__body">
           <div class="page__body-img">
-            <img src="/public/images/_Avatar_.png" alt="profileimg">
+            <img src="/public/images/_Avatar_.png" alt="profileimg" />
           </div>
           <div class="info">
             <div class="info__first">
-              <h2 class="info__first-name">홍길동</h2> 
+              <h2 class="info__first-name">홍길동</h2>
               <h4 class="info__first-position">차장</h4>
             </div>
             <div class="info__second">
-              <img src="/public/icons/email.svg" alt="email">
+              <img src="/public/icons/email.svg" alt="email" />
               <h4 class="email">honggildong@google.com</h4>
-              <img src="/public/icons/call.svg" alt="call">
+              <img src="/public/icons/call.svg" alt="call" />
               <h4 class="call">010-1234-5678</h4>
             </div>
           </div>

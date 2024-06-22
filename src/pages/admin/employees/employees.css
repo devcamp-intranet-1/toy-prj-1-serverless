@@ -9,13 +9,25 @@
   background-color: var(--gray-01);
 }
 
+.page__event {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.event__birthday h3 {
+  margin-right: 15px;
+}
 .page__event,
 .page__header {
   display: flex;
   align-items: center;
   align-self: stretch;
   flex: 1 0 0;
-  gap: 24px;
+}
+.page__event img {
+  width: 18px;
+  height: 18px;
 }
 
 .page__event {
@@ -38,29 +50,37 @@
 .table-container {
   overflow-y: auto;
   width: 100%;
+  display: flex;
 }
 
 table {
   width: 100%;
 }
 
-table tr {
-  border-bottom: 1px solid var(--gray-05); 
-  font-size: 14px;
-
-}
-
-.userlist {
+thead {
   position: sticky;
   top: 0;
   background-color: var(--gray-01);
 }
 
-tbody tr td {
-  text-align: center;
+tr {
+  font-size: 14px;
 }
 
-#employeeTableBody td {
-  height: 100px;
-  vertical-align: middle;
+th {
+  font-size: var(h5);
+  height: 10px;
 }
+
+tbody {
+  text-align: center;
+  font-size: var(h5);
+}
+
+tbody td {
+  vertical-align: middle;
+  padding: 8px 0;
+  font-size: 14px;
+  border-bottom: 1px solid var(--gray-05);
+}
+

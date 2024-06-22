@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/src/styles/layout.css" />
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="addemployees.css" />
+    <link rel="stylesheet" href="addemployee.css" />
     <link rel="stylesheet" href="/src/styles/color.css" />
     <link rel="stylesheet" href="/src/styles/font.css" />
     <link rel="stylesheet" href="/src/styles/layout.css" />
@@ -92,17 +92,17 @@
       <!-------------------------- 페이지 콘텐츠 -------------------------->
       <div class="page">
         <!-- 페이지 타이틀 -->
-        <h1 class="page__title">직원 관리 > 직원 상세</h1>
+        <h1 class="page__title">직원 관리 > 직원 추가</h1>
 
         <!-- 상단 삭제/수정 버튼 부분입니다. -->
         <div class="page__content">
           <div class="page__button">
-          <button class="modalOpenBtn" data-color='warning' data-shape='block'>삭제하기</button>
-          <button data-color='positive' data-shape='block'>수정하기</button>
+          <button data-color='warning' data-shape='block'>삭제하기</button>
+          <button class="modalOpenBtn" data-color='positive' data-shape='block'>수정하기</button>
           </div>
 
           <!-- 직원 삭제 모달 부분입니다. -->
-          <div class="modal modalHidden">
+          <!-- <div class="modal modalHidden">
             <div class="modal__background"></div>
             <div class="modal__content">
                 <div class="modal__header"><h4>직원 삭제</h4> 
@@ -114,8 +114,28 @@
                     />
                   </div>
                 <div>
-                    <h5>홍길동님을 삭제하시겠습니까 ?</h5>
-                    <button data-color='warning' data-shape='block'>삭제</button>
+                    <h5>홍길동님의 정보를 삭제하시겠습니까 ?</h5>
+                    <button data-color='warning' data-shape='block'>수정</button>
+                </div>
+            </div>
+            </div>
+          </div> -->
+
+          <!-- 직원 수정 모달 부분입니다. -->
+          <div class="modal modalHidden">
+            <div class="modal__background"></div>
+            <div class="modal__content">
+                <div class="modal__header"><h4>직원 수정</h4> 
+                    <img
+                      src="/public/icons/close.svg"
+                      alt="close-icon"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                <div>
+                    <h5>홍길동님의 정보를 수정하시겠습니까 ?</h5>
+                    <button data-color='positive' data-shape='block'>수정</button>
                 </div>
             </div>
             </div>
@@ -123,7 +143,7 @@
 
           <!-- 직원 프로필 이미지 업로드 부분입니다. -->
           <div class="page__edit">
-            <img src="/public/images/_Avatar_.png" alt="profileimg">
+            <img src="/public/icons/user.svg" alt="profileimg">
             <div class="edit-btn">
               <button data-color='neutral' data-shape='line'>이미지 등록</button>
               <button data-color='neutral' data-shape='line'>이미지 변경</button>
@@ -135,7 +155,7 @@
             <ul class="user__info">
               <li class="info__name">
                 <label for="name"><h5>이름</h5></label>
-                <input data-shape="line" type="name" id="name" placeholder="홍길동"/>
+                <input data-shape="line" type="name" id="name" placeholder="홍길동" required/>
               </li>
 
               <li class="info__position">
@@ -152,22 +172,22 @@
 
               <li class="info__email">
                 <label for="email"><h5>이메일</h5></label>
-                <input data-shape="line" type="email" id="email" placeholder="eco@taeco.com"/>
+                <input data-shape="line" type="email" id="email" placeholder="eco@taeco.com" required/>
               </li>
 
               <li class="info__phonenumber">
                 <label for="phone"><h5>전화번호</h5></label>
-                <input data-shape="line" type="number" id="phone" placeholder="010-0000-0000"/>
+                <input data-shape="line" type="number" id="phone" placeholder="010-0000-0000" required/>
               </li>
 
               <li class="info__birthday">
                 <label for="birthday"><h5>생일</h5></label>
-                <input data-shape="line" type="date" id="birthday" placeholder="1900.00.00"/>
+                <input data-shape="line" type="date" id="birthday" required/>
               </li>
               
               <li class="info__joinday">
                 <label for="joinday"><h5>입사일</h5></label>
-                <input data-shape="line" type="date" id="joinday" placeholder="1900.00.00"/>
+                <input data-shape="line" type="date" id="joinday" required/>
               </li>
             </ul>
           </form>

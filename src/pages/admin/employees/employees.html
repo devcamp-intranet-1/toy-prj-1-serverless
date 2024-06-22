@@ -96,10 +96,12 @@
         <h1 class="page__title">직원 관리</h1>
 
         <div class="page__event">
-          <span class="event__birthday"><h3>금일의 생일자: 홍길동</h3></span>
-          <span class="event__joinday"><h3>금일의 입사자: 홍길동</h3></span>
-          
+            <img src="/public/icons/cake.svg" alt="cake">
+            <span class="event__birthday"><h3>금일의 생일자: 홍길동</h3></span>
+            <img src="/public/icons/seedling.svg" alt="">
+            <span class="event__joinday"><h3>금일의 입사자: 홍길동</h3></span>
         </div>
+
         <div class="page__header">
           <input type="search" id="search" name="search" placeholder="검색">
           <button data-color='positive' data-shape='block' onclick="location.href='addemployee.html'">직원 추가</button>
@@ -117,6 +119,7 @@
                 <th class="birthday">생일</th>
                 <th class="joinday">입사일</th>
                 <th class="phonenumber">핸드폰 번호</th>
+                <th class="edit">관리</th>
               </tr>
             </thead>
             <tbody id="employeeTableBody"></tbody>

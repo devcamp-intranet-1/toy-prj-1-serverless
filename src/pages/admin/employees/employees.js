@@ -12,6 +12,7 @@ function loadEmployees() {
       <td>${employee.birthday}</td>
       <td>${employee.joinday}</td>
       <td>${employee.phone}</td>
+      <td><button data-color='neutral' data-shape='line' onclick="location.href='detail.html'">수정</button></td>
     `;
     
     tbody.appendChild(row);

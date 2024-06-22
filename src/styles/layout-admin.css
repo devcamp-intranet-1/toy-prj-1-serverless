@@ -1,0 +1,85 @@
+/*************** 전체 레이아웃 ***************/
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+div.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+/*************** 좌측 레이아웃 ***************/
+.h4 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+}
+
+div.container>.layout {
+    width: 220px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--color-white);
+    background-color: var(--color-sec-normal);
+}
+
+div.container>.layout>.layout__top {
+    height: 276px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+div.container>.layout>.layout__top>.layout__logo {
+    width: 188px;
+    height: 32px;
+    padding: 6px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.container>.layout>.layout__top>.layout__logo>img {
+    height: 24px;
+    /* width: 55px; */
+    padding: 4px;
+}
+
+div.container>.layout>.layout__top>.layout__nav {
+    width: 100%;
+    height: 220px;
+}
+
+div.container>.layout>.layout__top>.layout__nav>.layout__item,
+div.container>.layout>.layout__bottom>.layout__item {
+    height: 24px;
+    padding: 10px 0 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-white);
+    fill: var(--color-white);
+    text-decoration: none;
+    transition: .4s;
+}
+
+div.container>.layout>.layout__top>.layout__nav>.layout__item:hover {
+    background-image: linear-gradient(to right, rgb(64, 184, 131, 0.3), rgba(0, 0, 0, 0));
+    color: var(--color-white);
+    fill: var(--color-pri-normal);
+}
+
+div.container>.layout>.layout__bottom {
+    margin-bottom: 12px;
+}
+
+/*************** 우측 레이아웃 ***************/
+.contents {
+    flex: 1;
+    padding: 16px 24px;
+}

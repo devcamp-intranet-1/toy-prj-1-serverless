@@ -1,3 +1,11 @@
+/* global css */
+.h5 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+    font-weight: 500;
+}
+
+/* contents */
 .contents {
     padding: 16px 24px;
     gap: 12px;
@@ -5,32 +13,27 @@
     flex-direction: column;
 }
 
+/* Notice */
 .notice {
     width: 100%;
 }
 
 .notice__header,
-.notice__item {
-    width: 100%;
+.notice__row {
     height: 56px;
-
     display: flex;
-    align-items: center;
-    flex: 1 0 0;
     border-bottom: 1px solid var(--gray-05);
 }
 
 .notice__title {
-    height: 100%;
+    flex-grow: 1;
     padding: 0 10px;
-    flex: 1 0 0;
     display: flex;
     align-items: center;
 }
 
 .notice__registration-date {
     width: 140px;
-    height: 100%;
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -38,12 +41,12 @@
 
 .notice__mileage {
     width: 200px;
-    height: 100%;
     padding: 0 10px;
     display: flex;
     align-items: center;
 }
 
+/* Pagination */
 .pagination {
     display: flex;
     justify-content: flex-end;

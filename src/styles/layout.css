@@ -26,7 +26,7 @@ div.container>.layout {
   color: #575b6d;
 }
 
-div.container>.layout>.layout-btns {
+div.container>.layout>.layout__top {
   height: 276px;
   margin-top: 10px;
   display: flex;
@@ -34,7 +34,7 @@ div.container>.layout>.layout-btns {
   gap: 12px;
 }
 
-div.container>.layout>.layout-btns>.logo {
+div.container>.layout>.layout__top>.layout__logo {
   width: 188px;
   height: 32px;
   padding: 6px 16px;
@@ -43,19 +43,19 @@ div.container>.layout>.layout-btns>.logo {
   align-items: center;
 }
 
-div.container>.layout>.layout-btns>.logo>img {
+div.container>.layout>.layout__top>.layout__logo>img {
   height: 24px;
   /* width: 55px; */
   padding: 4px;
 }
 
-div.container>.layout>.layout-btns>div {
+div.container>.layout>.layout__top>.layout__nav {
   width: 100%;
   height: 220px;
 }
 
-div.container>.layout>.layout-btns>div>.layout-btn,
-div.container>.layout>.logout>.layout-btn {
+div.container>.layout>.layout__top>.layout__nav>.layout__item,
+div.container>.layout>.layout__bottom>.layout__item {
   height: 24px;
   padding: 10px 0 10px 16px;
   display: flex;
@@ -66,12 +66,12 @@ div.container>.layout>.logout>.layout-btn {
   transition: .4s;
 }
 
-div.container>.layout>.layout-btns>div>.layout-btn:hover {
+div.container>.layout>.layout__top>.layout__nav>.layout__item:hover {
   background-color: #40b883;
   color: white;
 }
 
-div.container>.layout>.logout{
+div.container>.layout>.layout__bottom{
   margin-bottom: 12px;
 }
 /*************** 우측 레이아웃 ***************/

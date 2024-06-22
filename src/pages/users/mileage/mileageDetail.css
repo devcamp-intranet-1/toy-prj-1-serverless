@@ -13,34 +13,34 @@
     flex-direction: column;
 }
 
-/* Notice */
-.notice {
+/* Details */
+.details {
     width: 100%;
 }
 
-.notice__header,
-.notice__row {
+.details__header,
+.details__row {
     height: 56px;
     display: flex;
     border-bottom: 1px solid var(--gray-05);
 }
 
-.notice__title {
+.details__title {
     flex-grow: 1;
     padding: 0 10px;
     display: flex;
     align-items: center;
 }
 
-.notice__registration-date {
+.details__registration-date {
     width: 140px;
     padding: 0 10px;
     display: flex;
     align-items: center;
 }
 
-.notice__mileage {
-    width: 200px;
+.details__mileage {
+    width: 100px;
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -74,4 +74,26 @@
     background-color: #ddd;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* 테블릿 버전 */
+@media screen and (max-width: 900px) {
+    .contents {
+        padding: 16px;
+    }
+
+    .pagination {
+        justify-content: center;
+    }
+}
+
+/* 모바일 버전 */
+@media screen and (max-width: 600px) {
+    .details__registration-date {
+        width: 80px;
+    }
+
+    .details__mileage {
+        width: 50px;
+    }
 }

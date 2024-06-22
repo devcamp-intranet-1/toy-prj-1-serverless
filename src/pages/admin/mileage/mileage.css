@@ -98,6 +98,12 @@ input:checked+.slider::before {
   /* 상대 위치 설정 */
   cursor: pointer;
   overflow: hidden;
+  transition: .4s;
+}
+
+.mileage-list__item:hover {
+  transform: scale(1.03);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 /* 검은 색 필터를 위한 가상 요소 */
@@ -151,19 +157,20 @@ form>div>input {
 
 }
 
+.contents {
+  padding: 16px;
+}
+
+.mileage-list {
+  padding: 0;
+}
+
 /* 모바일 버전 */
 @media screen and (max-width:600px) {
   .mileage-list__item {
     width: calc(50% - 8px);
   }
 
-  .contents {
-    padding: 16px;
-  }
-
-  .mileage-list {
-    padding: 0;
-  }
 
   .mileage-list__title h3 {
     /* h3->h4 */

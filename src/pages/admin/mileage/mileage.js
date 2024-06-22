@@ -29,8 +29,8 @@ function fillMileageList(data) {
     div.className = 'mileage-list__item';
     div.style.backgroundImage = `url(${item.image})`;
     div.innerHTML = `<div class="mileage-list__title">
-      <h3>${item.category}</h3>
-      <h5>${item.data}</h5>
+      <h4>${item.category}</h4>
+      <h6>${item.data}</h6>
       </div>`;
 
     makeModal(div);

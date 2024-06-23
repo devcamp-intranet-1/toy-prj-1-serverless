@@ -1,3 +1,7 @@
+.layout__logo .logo__menu {
+  display: none;
+}
+
 .page {
   background-color: var(--gray-01);
   display: flex;
@@ -55,11 +59,26 @@
   letter-spacing: 0.15px;
 }
 
-.info__second .email {
-  margin-right: 24px;
-
+.info__second .section1 ,
+.info__second .section2 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
-@media screen {
+.info__second .email {
+  margin-right: 24px;
+}
+
+/* 반응형 */
+/* 600px 보다 작을 때 */
+@media screen and (max-width:600px) {
+  div.container .layout {
+    width: 50px
+  }
+
+  .layout__logo>.logo__menu {
+    display: block;
+}
   
 }

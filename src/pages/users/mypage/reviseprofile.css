@@ -1,3 +1,7 @@
+.layout__logo .logo__menu {
+  display: none;
+}
+
 .page {
   display: flex;
   padding: 16px 24px;

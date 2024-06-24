@@ -257,3 +257,19 @@ tbody td:last-child {
   border-radius: var(--borderRadius, 4px);
   border: var(--none, 1px) solid var(--gray-06);
 }
+/* 미디어 쿼리 */
+@media (max-width: 600px) {
+  .menu__date,
+  tbody td:last-child {
+    display: none;
+  }
+  tbody td {
+    border: none;
+  }
+  tbody tr {
+    border-bottom: 1px solid var(--gray-04);
+  }
+  .pagination {
+    justify-content: center;
+  }
+}

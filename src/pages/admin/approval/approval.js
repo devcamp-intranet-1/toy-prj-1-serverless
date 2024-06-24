@@ -35,7 +35,6 @@ function openTab(evt, tabName) {
   document.getElementById(tabName).style.display = 'block';
   evt.currentTarget.className += ' active';
 }
-
 window.onload = function () {
   document.getElementById('심사중').style.display = 'block';
 };

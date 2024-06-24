@@ -144,19 +144,6 @@ function openTab(event, tabName) {
 }
 document.getElementById('심사중').style.display = 'block';
 
-document.addEventListener('DOMContentLoaded', function () {
-  const rows = document.querySelectorAll('tbody tr');
-
-  rows.forEach((row) => {
-    const dateCell = row.querySelector('td:last-child');
-    const secondCell = row.querySelector('td:nth-child(2)');
-
-    if (dateCell && secondCell) {
-      secondCell.setAttribute('data-date', dateCell.textContent);
-    }
-  });
-});
-
 // 페이지가 로드될 때 초기 설정
 window.onload = function () {
   // 초기 설정이나 로드 시 필요한 작업들을 여기에 추가할 수 있습니다.

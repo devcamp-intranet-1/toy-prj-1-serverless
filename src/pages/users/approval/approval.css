@@ -269,13 +269,6 @@ tbody td:last-child {
   tbody tr {
     border-bottom: 1px solid var(--gray-04);
   }
-  tbody td:nth-child(2)::after {
-    content: attr(data-date);
-    display: block;
-    margin-top: 8px;
-    font-size: 0.9em;
-    color: var(--gray-07);
-  }
   .pagination {
     justify-content: center;
   }

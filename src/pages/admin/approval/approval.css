@@ -239,3 +239,26 @@ textarea {
   background-color: var(--gray-05, #d4d6de);
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  thead th:nth-child(3),
+  thead th:nth-child(4),
+  thead th:last-child,
+  tbody td:nth-child(3),
+  tbody td:nth-child(4),
+  tbody td:last-child {
+    display: none;
+  }
+  thead th:first-child,
+  tbody td:first-child {
+    width: 60px;
+    flex: 0 0 60px;
+  }
+  thead th:nth-child(2),
+  tbody td:nth-child(2) {
+    width: 100%;
+    flex: 1;
+  }
+  .pagination {
+    justify-content: center;
+  }
+}

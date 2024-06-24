@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="/src/styles/color.css" />
     <link rel="stylesheet" href="/src/styles/font.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="/src/styles/layout.css" />
   </head>
 
   <body>
@@ -28,6 +27,7 @@
           <!-- 로고 -->
           <div class="layout__logo">
             <img src="/public/images/logo.png" />
+            <img src="/public/icons/menu-line.svg" alt="menu-line" class="logo__menu">
           </div>
 
           <!-- 네비게이션 -->
@@ -131,18 +131,22 @@
         </div>
         <div class="page__body">
           <div class="page__body-img">
-            <img src="/public/images/_Avatar_.png" alt="profileimg" />
+            <img src="/public/images/_Avatar_.png" alt="profileimg">
           </div>
           <div class="info">
             <div class="info__first">
-              <h2 class="info__first-name">홍길동</h2>
+              <h2 class="info__first-name">홍길동</h2> 
               <h4 class="info__first-position">차장</h4>
             </div>
             <div class="info__second">
-              <img src="/public/icons/email.svg" alt="email" />
-              <h4 class="email">honggildong@google.com</h4>
-              <img src="/public/icons/call.svg" alt="call" />
-              <h4 class="call">010-1234-5678</h4>
+              <div class="section1">
+                <img src="/public/icons/email.svg" alt="email">
+                <h4 class="email">honggildong@google.com</h4>
+              </div>
+              <div class="section2">
+                <img src="/public/icons/call.svg" alt="call">
+                <h4 class="call">010-1234-5678</h4>
+              </div>
             </div>
           </div>
         </div>

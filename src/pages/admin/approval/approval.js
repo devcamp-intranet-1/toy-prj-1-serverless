@@ -1,5 +1,5 @@
 // JSON 데이터 파일을 불러오는 함수
-fetch('approvla.json')
+fetch('approval.json')
   .then((response) => response.json())
   .then((data) => {
     addDataToTable(data.post);

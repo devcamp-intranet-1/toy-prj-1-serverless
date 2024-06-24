@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="/src/styles/font.css" />
     <link rel="stylesheet" href="/src/styles/color.css" />
     <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="/src/component/modal/modal.css" />
     <link rel="stylesheet" href="/src/styles/layout-admin.css" />
+    <link rel="stylesheet" href="/src/component/modal/modal.css" />
     <!-- 페이지 CSS -->
     <link rel="stylesheet" href="mileage.css" />
   </head>
@@ -142,7 +142,7 @@
     </div>
 
     <!-- 모달 -->
-    <div class="modal modalHidden">
+    <div id="modal-1" class="modal-box">
       <div class="modal__content">
         <div class="modal__header">
           <h2>마일리지 신청</h2>
@@ -215,7 +215,7 @@
 
           <button
             type="submit"
-            class="modal__button"
+            class="modal-box__button"
             data-color="positive"
             data-shape="block"
           >
@@ -224,8 +224,10 @@
         </form>
       </div>
     </div>
+    <div id="modal__background"></div>
 
-    <script src="../../../component/modal/modal.js"></script>
+
+    <script src="../../../component/modal/modal_v2.js"></script>
     <script src="mileage.js"></script>
   </body>
 </html>

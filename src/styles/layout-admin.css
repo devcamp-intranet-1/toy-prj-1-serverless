@@ -83,3 +83,17 @@ div.container>.layout>.layout__bottom {
     flex: 1;
     padding: 16px 24px;
 }
+
+/*************** 테블릿 버전 ***************/
+@media screen and (max-width:900px) {
+    div.container>.layout {
+        width: 180px;
+    }
+}
+
+/*************** 모바일 버전/****************/
+@media screen and (max-width:600px) {
+    div.container>.layout {
+        display: none;
+    }
+}

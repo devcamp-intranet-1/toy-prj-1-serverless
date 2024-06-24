@@ -210,3 +210,16 @@ textarea {
   transition: 0.3s;
   color: var(--color-white);
 }
+
+/* 반응형 */
+@media (max-width: 767px) {
+  /* 공지페이지 */
+  #buttonGroup > button {
+    flex: 1 0 40%;
+  }
+
+  /* 상세 페이지 */
+  .noticeDetail__items {
+    flex: 1 0 100%;
+  }
+}

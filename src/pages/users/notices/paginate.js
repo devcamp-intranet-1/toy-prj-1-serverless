@@ -130,3 +130,12 @@ fetch(jsonFilePath)
   .catch((error) => console.error('Error fetching JSON:', error));
 
 // TODO: 페이지네이션 << >> 아이콘 추가
+
+const user = {
+  name: 'John Doe',
+  age: 30,
+  emails: ['john@example.com', 'jane@example.com'],
+};
+
+localStorage.setItem('user', JSON.stringify(user)); //객체를 json string으로 변환 후 local storage에 저장
+console.log(JSON.parse(localStorage.getItem('user'))); //local storage에서 json string을 object로 변환

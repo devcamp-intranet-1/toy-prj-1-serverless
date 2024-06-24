@@ -39,8 +39,8 @@ div.container > .layout {
   flex-direction: column;
   justify-content: space-between;
   color: #575b6d;
+  border-right: 1px solid var(--gray-04);
 }
-
 div.container > .layout > .layout__top {
   height: 276px;
   margin-top: 10px;

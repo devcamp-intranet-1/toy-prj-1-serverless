@@ -163,7 +163,7 @@ form>div>input {
 
 .mileage-list {
   padding: 0;
-}
+  src/component/modal/modal.js}
 
 /* 모바일 버전 */
 @media screen and (max-width:600px) {

@@ -39,7 +39,7 @@ div.contents {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
-  background-color: transparent !important;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -182,9 +182,9 @@ label {
   margin-top: 10px;
 }
 
-div .category,
-div .title,
-div .user,
+.modal__content div .category,
+.modal__content div .title,
+.modal__content div .user,
 textarea,
 input[type='date'] {
   width: 100%;
@@ -194,9 +194,9 @@ input[type='date'] {
   border: 1px solid var(--gray-04);
   border-radius: 4px;
 }
-div .category,
-div .title,
-div .user {
+.modal__content div .category,
+.modal__content div .title,
+.modal__content div .user {
   text-align: left;
 }
 

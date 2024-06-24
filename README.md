@@ -1,73 +1,95 @@
-# Toy Project 1 Serverless
-
+# Toy Project 1
 Dev-FE 토이 프로젝트 1조의 git 연습을 위한 레포지토리입니다.
 
-서버 관련 코드는 제외한 템플릿입니다.
+## 개요
 
-## 📁 디렉토리 구조
-```plaintext
-project-root/
-│
-├── public/                   # Public assets served by the server
-│   ├── images/               # Images folder
-│   ├── icons/                # Icons folder
-│   └── login/                # Login page source files
-│
-├── src/                      # Source files
-│   ├── pages/                # Page-specific files
-│   │   ├── admin/            # Admin pages
-│   │   │   ├── dashboard/
-│   │   │   │   ├── dashboard.html
-│   │   │   │   ├── dashboard.css
-│   │   │   │   └── dashboard.js
-│   │   │   ├── employees/
-│   │   │   │   ├── employees.html
-│   │   │   │   ├── employees.css
-│   │   │   │   └── employees.js
-│   │   │   ├── approvals/
-│   │   │   │   ├── approvals.html
-│   │   │   │   ├── approvals.css
-│   │   │   │   └── approvals.js
-│   │   │   ├── mileage/
-│   │   │   │   ├── mileage.html
-│   │   │   │   ├── mileage.css
-│   │   │   │   └── mileage.js
-│   │   │   └── notices/
-│   │   │       ├── notices.html
-│   │   │       ├── notices.css
-│   │   │       └── notices.js
-│   │   │    
-│   │   └── user/             # User pages
-│   │       ├── dashboard/
-│   │       │   ├── dashboard.html
-│   │       │   ├── dashboard.css
-│   │       │   └── dashboard.js
-│   │       ├── mypage/
-│   │       │   ├── mypage.html
-│   │       │   ├── mypage.css
-│   │       │   └── mypage.js
-│   │       ├── approvals/
-│   │       │   ├── approvals.html
-│   │       │   ├── approvals.css
-│   │       │   └── approvals.js
-│   │       ├── mileage/
-│   │       │   ├── mileage.html
-│   │       │   ├── mileage.css
-│   │       │   └── mileage.js
-│   │       └── notices/
-│   │           ├── notices.html
-│   │           ├── notices.css
-│   │           └── notices.js   
-│   │
-│   ├── styles/               # Global styles
-│   │   └── layout.css        # Layout CSS
-│   │   
-│   │
-│   ├── scripts/              # Global scripts
-│   │   └── utils.js          # Utility functions
-│   │   
-│   └── index.js              # Main JavaScript entry point
-│
-├── index.html                # Main entry point (로그인 페이지)
-└── README.md                 # Project documentation
-```
+### 프로젝트명
+
+ESG 기업 사내 인트라 구축
+
+### 목표
+
+- 직원 데이터베이스(프로필) 구축 및 관리
+- 근태 및 휴가 관리 시스템 구축
+- 직원들의 출결 및 휴가 관리 효율화
+- 기업 공지 시스템 구축 및 관리
+- 사용자 친화적인 웹 인터페이스 제공
+- 내부 커뮤니케이션 및 협업 강화
+
+### 사용자 정의
+
+- 회사 전 직원(사용자)
+- 인사부서(관리자)
+
+## 요구사항
+
+요구사항 정의서 참고
+
+### 시스템 아키텍처
+
+#### 아키텍처 개요
+
+- 사용 툴: HTML, CSS, JavaScript, Node.js
+
+#### 모듈 구성
+
+- 프론트엔드: 사용자 인터페이스, 데이터 시각화, API 연동
+- 백엔드: RESTful API, 비즈니스 로직, 데이터베이스 연동
+- 데이터베이스: 직원 정보, 급여 정보, 근태 정보, 휴가 정보
+
+### 데이터베이스 설계
+
+데이터베이스 설계서 참고
+
+#### 인터페이스 설계
+
+프론트엔드-백엔드 인터페이스: RESTful API를 사용한 데이터 통신
+백엔드-데이터베이스 인터페이스: Prisma를 사용한 MySQL 연동
+
+## 프로젝트 범위
+
+### 사용자 페이지
+
+- 홈
+- 전자결재
+- 마이페이지 (부재 신청, 내역 확인, 필터링, 출결 관리, 타이머, 프로필)
+- 공지(갤러리)
+- 마일리지 페이지
+- 로그인, 로그아웃, 회원가입
+
+### 관리자 페이지
+
+- 홈
+- 전자결재 (승인, 거절)
+- 직원관리 (직원 정보 추가, 수정, 삭제, 페이지네이션)
+- 공지(갤러리) (공지 작성, 수정, 삭제)
+- 로그인, 로그아웃, 회원가입
+- 마일리지 페이지
+
+### 공통 기능
+
+- 사용자 및 관리자 정보 변경 연동
+
+## 구현 계획
+
+### 개발 환경
+
+- 사용 기술: HTML, CSS, JavaScript, Node.js
+- 도구: Visual Studio Code, Git
+
+### 개발 일정
+
+- **1주차:**
+    - 팀 빌딩 및 프로젝트 요구 사항 분석
+    - 기본 설계 및 계획 수립
+- **2주차:**
+    - HTML/CSS를 사용하여 프로젝트의 전체적인 틀을 구성
+- **3주차:**
+    - JavaScript를 사용하여 사용자 페이지 기능 개발 시작
+    - 전자결재 및 마이페이지 기능 구현
+- **4주차:**
+    - 사용자 페이지 기능 완성 및 테스트
+    - 관리자 페이지 기능 개발 시작
+- **5주차:**
+    - 관리자 페이지 기능 완성 및 테스트
+    - 최종 통합 테스트 및 버그 수정

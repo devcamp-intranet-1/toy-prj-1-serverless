@@ -195,6 +195,7 @@ tbody {
   gap: 12px;
   align-items: flex-start;
   align-self: stretch;
+  cursor: pointer;
 }
 
 tbody tr {

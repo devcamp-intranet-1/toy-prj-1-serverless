@@ -104,7 +104,6 @@
           </div>
         </div>
 
-        
         <!-- 카테고리 selectbox -->
         <div class="content__row">
           <div class="filter">
@@ -136,9 +135,8 @@
                   <th class="menu__date">신청일</th>
                 </tr>
               </thead>
-              <tbody>
-                <tbody id="boardContent">
-                </tbody>
+              <tbody id="boardContent">
+                <!--json데이터 추가-->
               </tbody>
             </table>
           </div>
@@ -153,8 +151,7 @@
                   <th class="menu__date">신청일</th>
                 </tr>
               </thead>
-              <tbody>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
           <div id="반려" class="tab-content">
@@ -168,23 +165,52 @@
                   <th class="menu__date">신청일</th>
                 </tr>
               </thead>
-              <tbody>
-              </tbody>
+              <tbody></tbody>
             </table>
           </div>
           <!-- 페이지네이션 구현하기 -->
           <div id="pagination" class="pagination">
             <button id="prevBtn">&laquo;</button>
-            <button class = "pageNumger__btn active" id="pageNumber">1</button>
-            <button class = "pageNumger__btn" >2</button>
-            <button class = "pageNumger__btn" >3</button>
-            <button class = "pageNumger__btn" >4</button>
+            <button class="pageNumger__btn active" id="pageNumber">1</button>
+            <button class="pageNumger__btn">2</button>
+            <button class="pageNumger__btn">3</button>
+            <button class="pageNumger__btn">4</button>
             <button id="nextBtn">&raquo;</button>
+          </div>
+        </div>
+        <!-- 결제신청 모달 -->
+        <div class="modal" id="modal">
+          <div class="modal__background"></div>
+          <div class="modal__content">
+            <span class="close__btn" id="closeModalBtn">&times;</span>
+            <h2>결제</h2>
+            <label for="category"><h4>카테고리</h4></label>
+            <div class="category"><h5>연차</h5></div>
+            <label for="startDate"><h4>날짜</h4></label>
+            <div class="data__container">
+              <input type="date" id="startDate" />
+              <span> - </span>
+              <input type="date" id="endDate" />
+            </div>
+            <label for="title"><h4>제목</h4></label>
+            <div class="title"><h5>반차신청합니다.</h5></div>
+            <label for="user"><h4>요청자</h4></label>
+            <div class="user"><h5>반차신청합니다.</h5></div>
+            <label for="description"><h4>반려사유</h4></label>
+            <textarea
+              id="description"
+              placeholder="내용을 입력해 주세요"
+              maxlength="100"
+            ></textarea>
+            <div class="content__row">
+              <button class="refuse__Btn" id="refuseBtn">거절</button>
+              <button class="submit__Btn" id="submitBtn">승인</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    
+    <script src="../approval/approvla.json"></script>
     <script src="../approval/approval.js"></script>
   </body>
 </html>

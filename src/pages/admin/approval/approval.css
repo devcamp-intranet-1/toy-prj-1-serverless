@@ -79,36 +79,57 @@ table thead {
   color: var(--gray-01, #fcfcfc);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
-.title {
+tbody {
   display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  align-self: stretch;
+  cursor: pointer;
+}
+
+tbody tr.title {
+  display: flex;
+  height: 38px;
+  padding: 0px 12px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  border-radius: 6px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+}
+tbody td {
+  flex: 1 0 0;
+  padding: 12px;
+  border-bottom: 1px solid var(--gray-04);
 }
 table tr,
 table th {
   display: flex;
   width: 100%;
 }
-th:first-child,
-td:first-child {
+th .menu__tpye,
+td .menu__tpye {
   width: 10%;
 }
 
-th:nth-child(2),
-td:nth-child(2) {
+th .menu__title,
+td .menu__title {
   width: 35%;
 }
 
-th:nth-child(3),
-td:nth-child(3) {
+th .menu__user,
+td .menu__user {
   width: 15%;
 }
 
-th:nth-child(4),
-td:nth-child(4) {
+th .menu__reason,
+td .menu__reason {
   width: 30%;
 }
 
-th:nth-child(5),
-td:nth-child(5) {
+th .menu__date,
+td .menu__date {
   width: 15%;
 }
 .pagination {
@@ -124,4 +145,97 @@ td:nth-child(5) {
 .pagination #pageNumber {
   background: var(--pri-normal, #40b883);
   color: var(--gray-01, #fcfcfc);
+}
+
+label {
+  text-align: left;
+}
+.modal__content {
+  margin: 15% auto;
+  border: 1px solid var(--gray-07, #8a8d93);
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.close__btn {
+  color: var(--gray-07, #8a8d93);
+  float: right; /*오른쪽으로 정렬*/
+  font-size: 28px;
+  font-weight: bold; /*글자 굵기 : 굴은 글꼴 */
+  cursor: pointer;
+}
+
+.close__btn:hover,
+.close__btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal label {
+  display: block;
+  margin-top: 10px;
+}
+
+div .category,
+div .title,
+div .user,
+textarea,
+input[type='date'] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  border: 1px solid var(--gray-04);
+  border-radius: 4px;
+}
+div .category,
+div .title,
+div .user {
+  text-align: left;
+}
+
+textarea {
+  resize: none;
+}
+
+.data__container {
+  display: flex;
+  align-items: center;
+}
+
+.submit__Btn {
+  background: var(--pri-normal, #40b883);
+  color: var(--gray-01, #fcfcfc);
+  padding: 15px 20px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.submit__Btn:hover {
+  background-color: var(--pri-dark, #39a374);
+  cursor: pointer;
+}
+.refuse__Btn {
+  background: var(--gray-01, #fcfcfc);
+  color: var(--pri-normal, #40b883);
+  padding: 15px 20px;
+  margin-top: 20px;
+  border: 1px solid var(--pri-normal, #40b883);
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.refuse__Btn:hover {
+  background-color: var(--gray-05, #d4d6de);
+  cursor: pointer;
 }

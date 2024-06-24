@@ -84,3 +84,9 @@ tbody td {
   border-bottom: 1px solid var(--gray-05);
 }
 
+/* 모바일 */
+@media screen and (max-width: 600px) {
+  thead {
+    display: none;
+  }
+}

@@ -85,7 +85,7 @@ div.container>.layout>.layout__bottom {
 }
 
 /*************** 테블릿 버전 ***************/
-@media screen and (max-width:900px) {
+@media screen and (max-width:1024px) {
     div.container>.layout {
         width: 180px;
     }

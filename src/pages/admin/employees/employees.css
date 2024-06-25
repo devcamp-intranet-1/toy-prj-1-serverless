@@ -13,6 +13,9 @@
   display: flex;
   flex-direction: row;
   gap: 4px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px;
 }
 
 .event__birthday h3 {
@@ -28,13 +31,6 @@
 .page__event img {
   width: 18px;
   height: 18px;
-}
-
-.page__event {
-  flex-direction: row;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  padding: 8px;
 }
 
 .page__header {
@@ -85,8 +81,45 @@ tbody td {
 }
 
 /* 모바일 */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 599px) {
+  .page {
+    width: 90%;
+  }
+
+  .page__title {
+    padding: 5px;
+  }
+
+  .page__event h3 {
+    font-size: 16px;
+  }
+
+  .page__header input {
+    width: 200px;
+  }
+
   thead {
     display: none;
+  }
+
+  /* 첫 번째 td (이미지)는 가로로 유지 */
+  tbody td:first-child {
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+
+  /* 나머지 td 요소는 세로로 배치 */
+  tbody td:not(:first-child) {
+    display: block;
+    text-align: left;
+  }
+
+  /* th 내용을 td 요소에 ::before로 붙이기 */
+  tbody td::before {
+    content: attr(data-label);
+    flex: 1 1 auto;
+    font-weight: bold;
+    margin-right: 8px;
   }
 }

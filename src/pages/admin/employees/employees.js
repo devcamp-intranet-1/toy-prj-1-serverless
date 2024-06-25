@@ -6,13 +6,13 @@ function loadEmployees() {
 
     row.innerHTML = `
       <td><img src="${employee.img}" alt="profileimg"></td>
-      <td>${employee.name}</td>
-      <td>${employee.email}</td>
-      <td>${employee.position}</td>
-      <td>${employee.birthday}</td>
-      <td>${employee.joinday}</td>
-      <td>${employee.phone}</td>
-      <td><button data-color='neutral' data-shape='line' onclick="location.href='detail.html'">수정</button></td>
+      <td data-label="이름">${employee.name}</td>
+      <td data-label="이메일">${employee.email}</td>
+      <td data-label="직함">${employee.position}</td>
+      <td data-label="생일">${employee.birthday}</td>
+      <td data-label="입사일">${employee.joinday}</td>
+      <td data-label="번호">${employee.phone}</td>
+      <td data-label="관리"><button data-color='neutral' data-shape='line' onclick="location.href='detail.html'">수정</button></td>
     `;
 
     tbody.appendChild(row);

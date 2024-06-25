@@ -131,7 +131,14 @@
 
     <div class="page__header">
       <h2>내 정보</h2>
-      <button data-color='positive' data-shape='block'>변경사항 저장</button>
+      <!-- 모바일 버전 토스트 -->
+    <div class="toast-mobile">
+      <img src="/public/icons/check.svg" alt="check">
+      <div class="text">
+        <h5>수정 완료</h5>
+      </div>
+    </div>
+      <button data-color='positive' data-shape='block' id="save">변경사항 저장</button>
     </div>
 
     <!-- 내 정보 사진 수정 부분입니다. -->
@@ -190,6 +197,8 @@
           </div>
         </div>
         </div>
+
     </div>
+    
 </body>
 </html>

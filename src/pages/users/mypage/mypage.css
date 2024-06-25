@@ -59,7 +59,7 @@
   letter-spacing: 0.15px;
 }
 
-.info__second .section1 ,
+.info__second .section1,
 .info__second .section2 {
   display: flex;
   flex-direction: row;
@@ -70,15 +70,22 @@
   margin-right: 24px;
 }
 
-/* 반응형 */
-/* 600px 보다 작을 때 */
-@media screen and (max-width:600px) {
-  div.container .layout {
-    width: 50px
+/* 모바일 */
+@media (max-width: 599px) {
+  .info__second {
+    display: flex;
+    flex-direction: column;
   }
-
-  .layout__logo>.logo__menu {
-    display: block;
 }
-  
+
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .info__second {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
 }

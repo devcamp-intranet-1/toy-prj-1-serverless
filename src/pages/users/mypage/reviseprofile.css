@@ -34,7 +34,7 @@
 
 .body__img {
   position: relative;
-  width: 200px; 
+  width: 200px;
   height: 200px;
   margin-bottom: 20px;
   background-color: var(--color-black);
@@ -51,12 +51,11 @@
   opacity: 0.5;
 }
 
-
 #foreground {
   position: absolute;
-  top: 50%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 20%;
   height: 20%;
   z-index: 2;
@@ -107,7 +106,7 @@ form {
 }
 
 .page__footer .toast-message {
-  background-color: rgba(64, 184, 131, 0.20);
+  background-color: rgba(64, 184, 131, 0.2);
   color: var(--color-pri-dark);
   border-radius: 4px;
   display: flex;
@@ -132,4 +131,63 @@ form {
   gap: 4px;
   flex: 1 0 0;
   margin-left: 5px;
+}
+
+.toast-mobile {
+  background-color: rgba(64, 184, 131, 0.2);
+  color: var(--color-pri-dark);
+  border-radius: 4px;
+  display: flex;
+  width: 120px;
+  height: 31px;
+  padding: 6px 14px;
+  align-items: flex-start;
+  box-sizing: border-box;
+  gap: 5px;
+  margin-right: -40px;
+}
+
+/* 모바일 */
+@media (max-width: 599px) {
+  .page {
+    padding: 8px 12px;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .user__info li {
+    width: 100%;
+  }
+
+  .user__info span {
+    width: 130px;
+  }
+
+  li input {
+    width: 100%;
+  }
+
+  .page__footer .toast-message {
+    display: none;
+  }
+}
+
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .page__footer .toast-message {
+    bottom: auto;
+    margin-top: 10px;
+  }
+
+  .toast-mobile {
+    display: none;
+  }
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
+  .toast-mobile {
+    display: none;
+  }
 }

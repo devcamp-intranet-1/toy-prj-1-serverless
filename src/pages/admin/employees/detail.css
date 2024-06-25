@@ -21,11 +21,11 @@
 
 .page__button {
   display: flex;
-justify-content: flex-end;
-align-items: center;
-gap: 8px;
-align-self: stretch;
-/* margin: 24px 16px; */
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  /* margin: 24px 16px; */
 }
 
 .page__edit {
@@ -56,7 +56,7 @@ align-self: stretch;
   visibility: hidden;
 }
 
-form{
+form {
   display: block;
   width: 100%;
 }
@@ -67,13 +67,13 @@ form{
 
 .user__info label {
   display: flex;
-width: 190.667px;
-padding: 16px;
-align-items: center;
-flex-direction: row;
+  width: 190.667px;
+  padding: 16px;
+  align-items: center;
+  flex-direction: row;
 }
 
-.user__info li{
+.user__info li {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -85,8 +85,7 @@ flex-direction: row;
 }
 
 .modal__content {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 
-  0 6px 20px rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
 }
 
 .modal img {
@@ -97,4 +96,24 @@ flex-direction: row;
 .modal button {
   width: 100%;
   margin-top: 16px;
+}
+
+/* 모바일 */
+@media (max-width: 599px) {
+  .page {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .modal__content {
+    width: 80%;
+  }
+}
+
+/* 타블렛 */
+@media (min-width: 600px) and (max-width: 1023px) {
+}
+
+/* 데스크탑 */
+@media (min-width: 1024px) {
 }
